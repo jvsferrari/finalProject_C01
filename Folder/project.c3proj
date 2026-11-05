@@ -1,0 +1,657 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 50603,
+	"name": "final",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "x7uvs9lmzmj",
+	"objectTypes": {
+		"items": [
+			"Audio",
+			"boot",
+			"button",
+			"gameName",
+			"start",
+			"music",
+			"sounds",
+			"Mouse",
+			"Keyboard",
+			"lilac",
+			"industrialv2",
+			"icons1",
+			"pixelartillustrationworkdeskbackgroundgimped",
+			"windowButtons",
+			"icons2",
+			"icons3",
+			"Browser",
+			"levels",
+			"fakeLogin",
+			"bitcoinMiner",
+			"wiper",
+			"keylogger",
+			"trojan",
+			"clock",
+			"clockHours",
+			"clockMinutes",
+			"hpBar",
+			"hpBarBG"
+		],
+		"subfolders": []
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"mainMenu",
+			"tilemaps",
+			"enemies"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"start",
+			"newGame",
+			"downloads",
+			"documentos",
+			"planilhas",
+			"codigos",
+			"trojan",
+			"fakeLogin",
+			"bitcoinMiner",
+			"wiper",
+			"keylogger"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"telaInicial",
+			"levels"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"keylogger",
+					"bitcoinMiner",
+					"fakeLogin",
+					"wiper",
+					"trojan"
+				],
+				"subfolders": [],
+				"name": "enemies"
+			}
+		]
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "Blood_3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 299542215131456,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Blood_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 130970459052424,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Blood_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 386539036420511,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Punch_with_electricity.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 948516692079757,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Trap_electric_shock.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 911755292502796,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Glitch.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 816466658637797,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Trap_saw.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 663555942922216,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Laser.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 335885355520447,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Knife_throwing.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 680084315712836,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Punch.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 823418987621848,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Kick.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 871463815187094,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Walkie_talkie_talks_scream.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 845492260464430,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Walkie_talkie_talks_anxious_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 569495150085128,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Walkie_talkie_talks_anxious_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 396414161833272,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Walkie_talkie_talks_normal_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 973407806465988,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Walkie_talkie_talks_normal_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 225206080907707,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "High_security_door_open.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 878285512363509,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "High_security_door_close.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 221453160731857,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Prison_cell_open.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 232403164218006,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Prison_cell_close.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 968978707051747,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Prison_buzzer.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 322573710582478,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Alarm_loopable.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 970271184398069,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Metal_detection_frame_alarm_loopable.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 204402853761211,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Metal_detection_frame.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 252287640501035,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Footstep_alt_4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 397268678696382,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Footstep_alt_3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 712188827490243,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Footstep_alt_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 743653551783275,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Footstep_alt_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 741722275937907,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Footstep_4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 275747248011213,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Footstep_3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 343676012931270,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Footstep_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 884109719929593,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Footstep_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 705116588396857,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "Battle_theme_prison.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 147498188789090,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Prisoners_escape_theme.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 725325697367897,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Riot_theme.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 911628278187388,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Alternative_theme_prison.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 383267220491036,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Main_theme_prison_loopable.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 816012810052393,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "Jersey25-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 544108470995820,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "FutureMillennium.ttf",
+					"type": "application/font-sfnt",
+					"sid": 383437099612800,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "FutureMillennium Black.ttf",
+					"type": "application/font-sfnt",
+					"sid": 700359417304668,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 669696331927089,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 677546784380996,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 464928711708996,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 820959142264376,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 859554683726289,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 336820747187624,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 824711707520077,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Flowchart 1"
+		],
+		"subfolders": []
+	},
+	"models3d": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"autoIncrementVersion": true,
+		"author": "",
+		"authorEmail": "jvsferrari@gmail.com",
+		"authorWebsite": "",
+		"appId": "",
+		"saveLLMContextFile": true,
+		"pixelRounding": false,
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"framerateMode": "vsync",
+		"fixedFramerate": 30,
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 10,
+		"zFar": 100000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"uidAllocationMode": "increment",
+		"zAxisScale": "regular",
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"scriptsType": "module"
+	},
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
+	"firstLayout": null
+}

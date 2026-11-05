@@ -1,0 +1,21 @@
+{
+	"name": "enemies",
+	"plugin-id": "Sprite",
+	"sid": 379310675612953,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 260084923485955
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"fakeLogin",
+		"bitcoinMiner",
+		"wiper",
+		"keylogger",
+		"trojan"
+	]
+}

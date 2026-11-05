@@ -1,0 +1,64 @@
+{
+	"name": "keylogger",
+	"plugin-id": "Sprite",
+	"sid": 380675103869928,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4560482,
+						"collisionPoly": {
+							"points": [
+								0.609375,
+								0.078125,
+								0.671875,
+								0.078125,
+								0.75,
+								0.109375,
+								0.78125,
+								0.140625,
+								0.921875,
+								0.5,
+								0.90625,
+								0.84375,
+								0.578125,
+								0.84375,
+								0.0625,
+								0.78125,
+								0.078125,
+								0.328125,
+								0.203125,
+								0.21875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 855871172777385,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

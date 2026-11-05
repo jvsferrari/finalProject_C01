@@ -1,0 +1,820 @@
+{
+	"name": "telaInicial",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "layout",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 381204073183999
+		},
+		{
+			"eventType": "variable",
+			"name": "musicOn",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 953692652135696
+		},
+		{
+			"eventType": "variable",
+			"name": "currentMusic",
+			"type": "string",
+			"initialValue": "\"Prisoners_escape_theme\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 751455219998209
+		},
+		{
+			"eventType": "variable",
+			"name": "soundsOn",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 929782762607687
+		},
+		{
+			"eventType": "variable",
+			"name": "currentTime2",
+			"type": "number",
+			"initialValue": "9",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 757785565482392
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 646587323230188
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 140864552628146,
+					"parameters": {
+						"variable": "layout",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 691165177003364,
+					"parameters": {
+						"audio-file": {
+							"path": "Prisoners_escape_theme"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "currentMusic"
+					}
+				}
+			],
+			"sid": 984786232422795
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "boot",
+					"sid": 603249393739992,
+					"parameters": {
+						"animation": "\"booting\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 661046111952897,
+					"parameters": {
+						"layer": "\"menu\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 616415683334412,
+					"parameters": {
+						"layer": "\"boot\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 677805950469231
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 920847809928565,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "start"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 846089783367382,
+					"parameters": {
+						"variable": "layout",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 106089602905549,
+					"parameters": {
+						"layout": "newGame"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 621944022616265,
+					"parameters": {
+						"variable": "layout",
+						"value": "2"
+					}
+				}
+			],
+			"sid": 793159185935013
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 724269126931220,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "music"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 201784520701297,
+					"parameters": {
+						"variable": "layout",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "toggleMusic",
+					"sid": 814979077120226
+				}
+			],
+			"sid": 708334349725047
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 231832783130334,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "sounds"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 990375883496281,
+					"parameters": {
+						"variable": "layout",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 725063632177245,
+					"parameters": {
+						"variable": "soundsOn"
+					}
+				}
+			],
+			"sid": 182113424369099
+		},
+		{
+			"functionName": "toggleMusic",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 131479722612553,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 237080727187884,
+							"parameters": {
+								"variable": "musicOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 359165736760086,
+							"parameters": {
+								"variable": "musicOn"
+							}
+						},
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 310824540167761,
+							"parameters": {
+								"tag": "currentMusic",
+								"state": "muted"
+							}
+						},
+						{
+							"id": "set-tile",
+							"objectClass": "icons3",
+							"sid": 274197031964990,
+							"parameters": {
+								"tile-x": "icons3.PositionToTileX(Mouse.X(\"icons\"))",
+								"tile-y": "icons3.PositionToTileY(Mouse.Y(\"icons\"))",
+								"tile": "52",
+								"state": "normal"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "music",
+							"sid": 258766008873035,
+							"parameters": {
+								"color": "HexColor(\"#E33B1B\")\n"
+							}
+						}
+					],
+					"sid": 609720502891493
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 814087490383377
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 742093093814334,
+							"parameters": {
+								"variable": "musicOn"
+							}
+						},
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 859432398804349,
+							"parameters": {
+								"tag": "currentMusic",
+								"state": "unmuted"
+							}
+						},
+						{
+							"id": "set-tile",
+							"objectClass": "icons3",
+							"sid": 834449708628963,
+							"parameters": {
+								"tile-x": "icons3.PositionToTileX(Mouse.X(\"icons\"))",
+								"tile-y": "icons3.PositionToTileY(Mouse.Y(\"icons\"))",
+								"tile": "48",
+								"state": "normal"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "music",
+							"sid": 944620953709032,
+							"parameters": {
+								"color": "HexColor(\"#FFFFFF\")\n"
+							}
+						}
+					],
+					"sid": 680322795370698
+				}
+			]
+		},
+		{
+			"functionName": "toggleSoundsColor",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 734767702850745,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 917956534638031,
+							"parameters": {
+								"variable": "soundsOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "sounds",
+							"sid": 266889181323576,
+							"parameters": {
+								"color": "HexColor(\"#E33B1B\")"
+							}
+						}
+					],
+					"sid": 950252417610644
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 467413265600054
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "sounds",
+							"sid": 259308156093779,
+							"parameters": {
+								"color": "HexColor(\"#FFFFFF\")"
+							}
+						}
+					],
+					"sid": 952890608270421
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 598043369223336
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 724296410653527,
+					"parameters": {
+						"variable": "layout",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "pixelartillustrationworkdeskbackgroundgimped",
+					"sid": 801530692810143,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "scale",
+						"end-x": "9",
+						"end-y": "9",
+						"time": "3",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "pixelartillustrationworkdeskbackgroundgimped",
+					"sid": 994063342982207,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "1088",
+						"end-y": "336",
+						"time": "3",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 694160601522014,
+					"parameters": {
+						"seconds": "3.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "pixelartillustrationworkdeskbackgroundgimped",
+					"sid": 422407522137861,
+					"parameters": {
+						"animation": "\"closingTabs\"",
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 939714692680954
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "pixelartillustrationworkdeskbackgroundgimped",
+					"sid": 562422320796549,
+					"parameters": {
+						"animation": "\"closingTabs\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "icons3",
+					"sid": 839069988680676,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "icons1",
+					"sid": 846676658714175,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.5",
+						"off-time": "0.3",
+						"duration": "9999999"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "levels",
+					"sid": 982613871098952,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 103637105743640,
+					"parameters": {
+						"layer": "\"clock\"",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 990129295166761
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 992443969961330,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 574606637879823,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 668444848019068,
+							"parameters": {
+								"first-value": "icons3.TileAt(icons3.PositionToTileX(Mouse.X(\"icons\")),icons3.PositionToTileY(Mouse.Y(\"icons\")))",
+								"comparison": 0,
+								"second-value": "52"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 885884526264800,
+							"parameters": {
+								"first-value": "icons3.TileAt(icons3.PositionToTileX(Mouse.X(\"icons\")),icons3.PositionToTileY(Mouse.Y(\"icons\")))",
+								"comparison": 0,
+								"second-value": "48"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "toggleMusic",
+							"sid": 648894992122797
+						}
+					],
+					"sid": 436444689049577,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 420971805949060,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 394478529226185,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 983477518771643,
+							"parameters": {
+								"first-value": "icons1.TileAt(icons1.PositionToTileX(Mouse.X(\"icons\")),icons1.PositionToTileY(Mouse.Y(\"icons\")))",
+								"comparison": 0,
+								"second-value": "15"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 518875969703311,
+							"parameters": {
+								"layout": "downloads"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 984465750406618,
+							"parameters": {
+								"variable": "layout",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 103139983504373,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 977670646937601,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 385790110266255,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 439553345472071,
+							"parameters": {
+								"first-value": "icons1.TileAt(icons1.PositionToTileX(Mouse.X(\"icons\")),icons1.PositionToTileY(Mouse.Y(\"icons\")))",
+								"comparison": 0,
+								"second-value": "24"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 609526501388025,
+							"parameters": {
+								"layout": "planilhas"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 199961555983760,
+							"parameters": {
+								"variable": "layout",
+								"value": "4"
+							}
+						}
+					],
+					"sid": 957691147728634,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 158896107828825,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 999258270468969,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 164253507838254,
+							"parameters": {
+								"first-value": "icons1.TileAt(icons1.PositionToTileX(Mouse.X(\"icons\")),icons1.PositionToTileY(Mouse.Y(\"icons\")))",
+								"comparison": 0,
+								"second-value": "22"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 769752116024644,
+							"parameters": {
+								"layout": "documentos"
+							}
+						}
+					],
+					"sid": 880539740897978,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 840234230137245,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 444191685187212,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 460802572115327,
+							"parameters": {
+								"first-value": "icons1.TileAt(icons1.PositionToTileX(Mouse.X(\"icons\")),icons1.PositionToTileY(Mouse.Y(\"icons\")))",
+								"comparison": 0,
+								"second-value": "14"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 190250022442757,
+							"parameters": {
+								"layout": "codigos"
+							}
+						}
+					],
+					"sid": 882996746747656,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 853589350112804,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "log",
+					"objectClass": "Browser",
+					"sid": 969889102114204,
+					"parameters": {
+						"type": "log",
+						"message": "\"uid \" & icons3.UID & \" | layer \" & icons3.LayerName & \" | tile \" & icons3.TileAt(icons3.PositionToTileX(Mouse.X(\"icons\")), icons3.PositionToTileY(Mouse.Y(\"icons\")))"
+					}
+				}
+			],
+			"sid": 267339670769125
+		}
+	],
+	"sid": 263166794968315
+}

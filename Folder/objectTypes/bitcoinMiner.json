@@ -1,0 +1,76 @@
+{
+	"name": "bitcoinMiner",
+	"plugin-id": "Sprite",
+	"sid": 205392092985546,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 608477157760521
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5696113,
+						"collisionPoly": {
+							"points": [
+								0.125,
+								0.21875,
+								0.859375,
+								0.21875,
+								0.890625,
+								0.25,
+								0.96875,
+								0.515625,
+								0.96875,
+								0.671875,
+								0.921875,
+								0.78125,
+								0.8125,
+								0.828125,
+								0.65625,
+								0.828125,
+								0.140625,
+								0.78125,
+								0.09375,
+								0.6875,
+								0.0625,
+								0.53125,
+								0.0625,
+								0.296875,
+								0.09375,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 491508586713145,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

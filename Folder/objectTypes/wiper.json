@@ -1,0 +1,72 @@
+{
+	"name": "wiper",
+	"plugin-id": "Sprite",
+	"sid": 201702104789314,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6207510,
+						"collisionPoly": {
+							"points": [
+								0.34375,
+								0.078125,
+								0.53125,
+								0.078125,
+								0.703125,
+								0.15625,
+								0.75,
+								0.21875,
+								0.890625,
+								0.734375,
+								0.890625,
+								0.796875,
+								0.84375,
+								0.84375,
+								0.53125,
+								0.921875,
+								0.296875,
+								0.921875,
+								0.21875,
+								0.875,
+								0.171875,
+								0.8125,
+								0.09375,
+								0.328125,
+								0.09375,
+								0.21875,
+								0.171875,
+								0.140625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 408685417958850,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

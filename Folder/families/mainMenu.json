@@ -1,0 +1,14 @@
+{
+	"name": "mainMenu",
+	"plugin-id": "Text",
+	"sid": 866604569204139,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"gameName",
+		"start",
+		"music",
+		"sounds"
+	]
+}

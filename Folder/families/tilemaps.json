@@ -1,0 +1,16 @@
+{
+	"name": "tilemaps",
+	"plugin-id": "Tilemap",
+	"sid": 125175510032324,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"industrialv2",
+		"lilac",
+		"icons1",
+		"windowButtons",
+		"icons2",
+		"icons3"
+	]
+}
