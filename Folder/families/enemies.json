@@ -2,7 +2,15 @@
 	"name": "enemies",
 	"plugin-id": "Sprite",
 	"sid": 379310675612953,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "layoutName",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 944139819937001
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pathfinding",

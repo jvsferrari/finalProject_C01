@@ -18,9 +18,9 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				0,
+				0,
+				0,
 				1
 			],
 			"isTransparent": false,
@@ -40,8 +40,8 @@
 	"sid": 235476856992359,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 2560,
-	"height": 1440,
+	"width": 1280,
+	"height": 720,
 	"unboundedScrolling": false,
 	"sampling": "auto",
 	"ambientLight": 0.03,

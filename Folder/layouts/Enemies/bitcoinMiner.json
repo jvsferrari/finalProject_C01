@@ -1,12 +1,12 @@
 {
-	"name": "trojan",
+	"name": "bitcoinMiner",
 	"layers": [
 		{
 			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 715341190648848,
+			"sid": 841329909429150,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -18,9 +18,9 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				0,
+				0,
+				0,
 				1
 			],
 			"isTransparent": false,
@@ -37,16 +37,16 @@
 			"global": false
 		}
 	],
-	"sid": 308237627288060,
+	"sid": 510742429388495,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 2560,
-	"height": 1440,
+	"width": 1280,
+	"height": 720,
 	"unboundedScrolling": false,
 	"sampling": "auto",
 	"ambientLight": 0.03,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "trojan"
+	"eventSheet": "bitcoinMiner"
 }

@@ -268,6 +268,65 @@
 				}
 			],
 			"sid": 764444536105319
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "enemies",
+					"sid": 144534118957814,
+					"parameters": {
+						"object": "iconSprites"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 318990186303717,
+					"parameters": {
+						"variable": "HP",
+						"value": "25"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "hpBar",
+					"sid": 981776623386872,
+					"parameters": {
+						"width": "hpBar.Width*(HP/100)"
+					}
+				}
+			],
+			"sid": 250370156959112
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 273749319136721,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "enemies"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 298012534312177,
+					"parameters": {
+						"layout": "enemies.layoutName"
+					}
+				}
+			],
+			"sid": 880309292541985
 		}
 	],
 	"sid": 694664222126839

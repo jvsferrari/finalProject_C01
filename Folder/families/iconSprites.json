@@ -1,0 +1,14 @@
+{
+	"name": "iconSprites",
+	"plugin-id": "Sprite",
+	"sid": 289509075066077,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"downloadsIcon",
+		"codesIcon",
+		"spreadsheetsIcon",
+		"documentsIcon"
+	]
+}

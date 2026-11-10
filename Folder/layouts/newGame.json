@@ -47,11 +47,11 @@
 					}
 				},
 				{
-					"type": "windowButtons",
+					"type": "windowButtons4x",
 					"properties": {
 						"initially-visible": true,
-						"tile-width": 32,
-						"tile-height": 32,
+						"tile-width": 128,
+						"tile-height": 128,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,
@@ -73,8 +73,8 @@
 							"max-height": 22,
 							"data": "880x0"
 						},
-						"tile-width": 32,
-						"tile-height": 32,
+						"tile-width": 128,
+						"tile-height": 128,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,

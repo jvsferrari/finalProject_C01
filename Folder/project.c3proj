@@ -100,7 +100,7 @@
 			"industrialv2",
 			"icons1",
 			"pixelartillustrationworkdeskbackgroundgimped",
-			"windowButtons",
+			"windowButtons4x",
 			"icons2",
 			"icons3",
 			"Browser",
@@ -114,7 +114,14 @@
 			"clockHours",
 			"clockMinutes",
 			"hpBar",
-			"hpBarBG"
+			"hpBarBG",
+			"downloadsIcon",
+			"codesIcon",
+			"spreadsheetsIcon",
+			"documentsIcon",
+			"windowButtons2x",
+			"Text",
+			"winGUI"
 		],
 		"subfolders": []
 	},
@@ -125,25 +132,39 @@
 		"items": [
 			"mainMenu",
 			"tilemaps",
-			"enemies"
+			"enemies",
+			"iconSprites"
 		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"start",
-			"newGame",
-			"downloads",
-			"documentos",
-			"planilhas",
-			"codigos",
-			"trojan",
-			"fakeLogin",
-			"bitcoinMiner",
-			"wiper",
-			"keylogger"
+			"newGame"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"downloads",
+					"documentos",
+					"planilhas",
+					"codigos"
+				],
+				"subfolders": [],
+				"name": "Levels"
+			},
+			{
+				"items": [
+					"trojan",
+					"fakeLogin",
+					"bitcoinMiner",
+					"wiper",
+					"keylogger"
+				],
+				"subfolders": [],
+				"name": "Enemies"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [

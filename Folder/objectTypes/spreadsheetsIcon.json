@@ -1,0 +1,56 @@
+{
+	"name": "spreadsheetsIcon",
+	"plugin-id": "Sprite",
+	"sid": 715598761415639,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 82,
+						"height": 106,
+						"originX": 4.402439024390244,
+						"originY": -1.9150943396226414,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3630542,
+						"collisionPoly": {
+							"points": [
+								0.06097560975609756,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0.9905660377358491,
+								0.012195121951219513,
+								0.9528301886792453
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 652000915236077,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

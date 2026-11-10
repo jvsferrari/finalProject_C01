@@ -133,7 +133,7 @@
 			"global": false
 		},
 		{
-			"name": "enemies",
+			"name": "characters",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -149,7 +149,9 @@
 					"uid": 28,
 					"sid": 488613737392818,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"layoutName": "bitcoinMiner"
+					},
 					"behaviors": {
 						"Pathfinding": {
 							"properties": {
@@ -202,7 +204,9 @@
 					"uid": 30,
 					"sid": 921251001033158,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"layoutName": "keylogger"
+					},
 					"behaviors": {
 						"Pathfinding": {
 							"properties": {
@@ -224,8 +228,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1056,
-						"y": 928,
+						"x": 192,
+						"y": 32,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -252,7 +256,9 @@
 					"uid": 29,
 					"sid": 229450781788161,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"layoutName": "trojan"
+					},
 					"behaviors": {
 						"Pathfinding": {
 							"properties": {
@@ -302,7 +308,9 @@
 					"uid": 32,
 					"sid": 649688675823588,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"layoutName": "trojan"
+					},
 					"behaviors": {
 						"Pathfinding": {
 							"properties": {
@@ -329,6 +337,40 @@
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "downloadsIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 31,
+					"sid": 291642242178023,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 684,
+						"y": 496,
+						"width": 122,
+						"height": 122,
+						"originX": -0.02459016393442623,
 						"originY": 0.5,
 						"color": [
 							1,
