@@ -2,8 +2,9 @@
 	"name": "telaInicial",
 	"events": [
 		{
+			"bookmark": true,
 			"eventType": "variable",
-			"name": "layout",
+			"name": "currentLayout",
 			"type": "number",
 			"initialValue": "1",
 			"comment": "",
@@ -64,7 +65,7 @@
 					"objectClass": "System",
 					"sid": 140864552628146,
 					"parameters": {
-						"variable": "layout",
+						"variable": "currentLayout",
 						"comparison": 0,
 						"value": "1"
 					}
@@ -140,7 +141,7 @@
 					"objectClass": "System",
 					"sid": 846089783367382,
 					"parameters": {
-						"variable": "layout",
+						"variable": "currentLayout",
 						"comparison": 0,
 						"value": "1"
 					}
@@ -160,7 +161,7 @@
 					"objectClass": "System",
 					"sid": 621944022616265,
 					"parameters": {
-						"variable": "layout",
+						"variable": "currentLayout",
 						"value": "2"
 					}
 				}
@@ -185,7 +186,7 @@
 					"objectClass": "System",
 					"sid": 201784520701297,
 					"parameters": {
-						"variable": "layout",
+						"variable": "currentLayout",
 						"comparison": 0,
 						"value": "1"
 					}
@@ -217,7 +218,7 @@
 					"objectClass": "System",
 					"sid": 990375883496281,
 					"parameters": {
-						"variable": "layout",
+						"variable": "currentLayout",
 						"comparison": 0,
 						"value": "1"
 					}
@@ -424,7 +425,7 @@
 					"objectClass": "System",
 					"sid": 724296410653527,
 					"parameters": {
-						"variable": "layout",
+						"variable": "currentLayout",
 						"comparison": 0,
 						"value": "2"
 					}
@@ -635,7 +636,7 @@
 							"objectClass": "System",
 							"sid": 984465750406618,
 							"parameters": {
-								"variable": "layout",
+								"variable": "currentLayout",
 								"value": "3"
 							}
 						}
@@ -689,7 +690,7 @@
 							"objectClass": "System",
 							"sid": 199961555983760,
 							"parameters": {
-								"variable": "layout",
+								"variable": "currentLayout",
 								"value": "4"
 							}
 						}

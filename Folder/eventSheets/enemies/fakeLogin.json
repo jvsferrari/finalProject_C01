@@ -1,5 +1,648 @@
 {
 	"name": "fakeLogin",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 480480807309799,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "winGUI",
+					"sid": 726087323511065,
+					"parameters": {
+						"layer": "\"background\""
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 730336548343926,
+					"parameters": {
+						"first-value": "winGUI.TileAt(winGUI.PositionToTileX(Mouse.X(\"background\")),winGUI.PositionToTileY(Mouse.Y(\"background\")))",
+						"comparison": 0,
+						"second-value": "83"
+					}
+				},
+				{
+					"id": "pick-all",
+					"objectClass": "System",
+					"sid": 199308225626235,
+					"parameters": {
+						"object": "winGUI"
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "winGUI",
+					"sid": 570867495212601,
+					"parameters": {
+						"layer": "\"popup\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "correctURLs",
+					"sid": 460476070125863,
+					"parameters": {
+						"layer": "\"popup\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "correctURLs",
+					"sid": 139990429179394,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "correctURLs.X + 320",
+						"end-y": "correctURLs.Y",
+						"time": "0.3",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "winGUI",
+					"sid": 776451944396931,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "winGUI.X + 320",
+						"end-y": "winGUI.Y",
+						"time": "0.3",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 566855666060871
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 642491550496107,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "winGUI",
+					"sid": 404377848064024,
+					"parameters": {
+						"layer": "\"popup\""
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "correctURLs",
+					"sid": 621780707621650,
+					"parameters": {
+						"layer": "\"popup\""
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 679649806618641,
+					"parameters": {
+						"first-value": "winGUI.TileAt(winGUI.PositionToTileX(Mouse.X(\"popup\")),winGUI.PositionToTileY(Mouse.Y(\"popup\")))",
+						"comparison": 0,
+						"second-value": "68"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "correctURLs",
+					"sid": 605986067451237,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "correctURLs.X - 320",
+						"end-y": "correctURLs.Y",
+						"time": "0.3",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "winGUI",
+					"sid": 413700560275641,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "winGUI.X - 320",
+						"end-y": "winGUI.Y",
+						"time": "0.3",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 550395081831984
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 493076401802625
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "arrCorrectURLs",
+					"sid": 378460376365123,
+					"parameters": {
+						"json": "\"{\"\"c2array\"\":true,\"\"size\"\":[13,1,1],\"\"data\"\":[[[\"\"google.com\"\"]],[[\"\"youtube.com\"\"]],[[\"\"wikipedia.org\"\"]],[[\"\"facebook.com\"\"]],[[\"\"instagram.com\"\"]],[[\"\"x.com\"\"]],[[\"\"reddit.com\"\"]],[[\"\"netflix.com\"\"]],[[\"\"linkedin.com\"\"]],[[\"\"github.com\"\"]],[[\"\"microsoft.com\"\"]],[[\"\"apple.com\"\"]],[[\"\"twitch.tv\"\"]]]}\""
+					}
+				},
+				{
+					"id": "load",
+					"objectClass": "arrFakeURLs",
+					"sid": 522321007409094,
+					"parameters": {
+						"json": "\"{\"\"c2array\"\":true,\"\"size\"\":[13,1,1],\"\"data\"\":[[[\"\"gogle.com\"\"]],[[\"\"metube.com\"\"]],[[\"\"wikipekia.org\"\"]],[[\"\"fakebook.com\"\"]],[[\"\"instagran.com\"\"]],[[\"\"y.com\"\"]],[[\"\"redit.com\"\"]],[[\"\"netfIix.com\"\"]],[[\"\"linkedout.com\"\"]],[[\"\"gitpub.com\"\"]],[[\"\"rnicrosoft.com\"\"]],[[\"\"aplle.com\"\"]],[[\"\"twich.tv\"\"]]]}\""
+					}
+				},
+				{
+					"id": "load",
+					"objectClass": "arrSorteio",
+					"sid": 102461862192617,
+					"parameters": {
+						"json": "\"{\"\"c2array\"\":true,\"\"size\"\":[26,1,1],\"\"data\"\":[[[\"\"google.com\"\"]],[[\"\"youtube.com\"\"]],[[\"\"wikipedia.org\"\"]],[[\"\"facebook.com\"\"]],[[\"\"instagram.com\"\"]],[[\"\"x.com\"\"]],[[\"\"reddit.com\"\"]],[[\"\"netflix.com\"\"]],[[\"\"linkedin.com\"\"]],[[\"\"github.com\"\"]],[[\"\"microsoft.com\"\"]],[[\"\"apple.com\"\"]],[[\"\"twitch.tv\"\"]],[[\"\"gogle.com\"\"]],[[\"\"metube.com\"\"]],[[\"\"wikipekia.org\"\"]],[[\"\"fakebook.com\"\"]],[[\"\"instagran.com\"\"]],[[\"\"y.com\"\"]],[[\"\"redit.com\"\"]],[[\"\"netfIix.com\"\"]],[[\"\"linkedout.com\"\"]],[[\"\"gitpub.com\"\"]],[[\"\"rnicrosoft.com\"\"]],[[\"\"aplle.com\"\"]],[[\"\"twich.tv\"\"]]]}\""
+					}
+				},
+				{
+					"callFunction": "changeURL",
+					"sid": 457634133336367
+				}
+			],
+			"sid": 156926482699092
+		},
+		{
+			"functionName": "changeURL",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "loadingBar",
+					"sid": 700444959310604
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 764102617809006,
+					"parameters": {
+						"layer": "\"tabs\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "controller",
+					"sid": 298325209092686,
+					"parameters": {
+						"instance-variable": "URLcount",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "controller",
+					"sid": 397886538797115,
+					"parameters": {
+						"instance-variable": "index",
+						"value": "floor(random(arrSorteio.Width))"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "controller",
+					"sid": 823488273137238,
+					"parameters": {
+						"instance-variable": "currentURL",
+						"value": "arrSorteio.At(controller.index)"
+					}
+				},
+				{
+					"id": "delete",
+					"objectClass": "arrSorteio",
+					"sid": 761483553054159,
+					"parameters": {
+						"index": "controller.index",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 361406133580083,
+					"parameters": {
+						"seconds": "0.7",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 501752005775289,
+					"parameters": {
+						"layer": "\"tabs\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "loadingBar",
+					"sid": 348793059977017,
+					"parameters": {
+						"animation": "\"Animation 1\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "currentURL",
+					"sid": 849414590521897,
+					"parameters": {
+						"text": "controller.currentURL"
+					}
+				}
+			],
+			"sid": 306419828469773
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 824050327619279,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "closeTab"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 713980039609549,
+					"parameters": {
+						"layer": "\"tabs\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 451894832887733,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "contains-value",
+							"objectClass": "arrCorrectURLs",
+							"sid": 513348309637183,
+							"parameters": {
+								"value": "controller.currentURL"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "addError",
+							"sid": 332372384940435
+						},
+						{
+							"callFunction": "changeURL",
+							"sid": 760050314046324
+						}
+					],
+					"sid": 431439077528942
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 677891071224090
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "changeURL",
+							"sid": 587075169673135
+						}
+					],
+					"sid": 398048704453483
+				}
+			]
+		},
+		{
+			"functionName": "addError",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "controller",
+					"sid": 830257670992051,
+					"parameters": {
+						"instance-variable": "errors",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 935447084345128,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 953747883500202,
+							"parameters": {
+								"instance-variable": "errors",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "errorBox",
+							"sid": 563924769109355,
+							"parameters": {
+								"animation": "\"X\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 571181403551912
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 459007293917611,
+							"parameters": {
+								"instance-variable": "errors",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "errorBox2",
+							"sid": 512449918077894,
+							"parameters": {
+								"animation": "\"X\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 695685634536228
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 498226132940527,
+							"parameters": {
+								"instance-variable": "errors",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "errorBox3",
+							"sid": 928322214568572,
+							"parameters": {
+								"animation": "\"X\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 952746201555027
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "controller",
+					"sid": 462761885421929,
+					"parameters": {
+						"instance-variable": "URLcount",
+						"comparison": 4,
+						"value": "10"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "controller",
+					"sid": 616053531480041,
+					"parameters": {
+						"instance-variable": "errors",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 963573375694725,
+					"parameters": {
+						"which": "previous"
+					}
+				}
+			],
+			"sid": 412470434383614,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "loadingBar",
+					"sid": 235057075306805,
+					"parameters": {
+						"animation": "\"Animation 1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "addError",
+					"sid": 779376667221998
+				},
+				{
+					"callFunction": "changeURL",
+					"sid": 185937336960041
+				}
+			],
+			"sid": 281401995029940
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "Keyboard",
+					"sid": 503228961010825,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 824239214592364,
+					"parameters": {
+						"layer": "\"tabs\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 817844833713358,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "contains-value",
+							"objectClass": "arrFakeURLs",
+							"sid": 995730790820114,
+							"parameters": {
+								"value": "controller.currentURL"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "addError",
+							"sid": 545644849598366
+						},
+						{
+							"callFunction": "changeURL",
+							"sid": 461818729319437
+						}
+					],
+					"sid": 399403501336630
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 584669095888246
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "changeURL",
+							"sid": 502239024946117
+						}
+					],
+					"sid": 779148609254808
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 561666935764831,
+					"parameters": {
+						"first-value": "0",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "log",
+					"objectClass": "Browser",
+					"sid": 199294829936818,
+					"parameters": {
+						"type": "log",
+						"message": "controller.URLcount"
+					}
+				}
+			],
+			"sid": 222512116641794
+		}
+	],
 	"sid": 843526960137887
 }

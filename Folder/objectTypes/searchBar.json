@@ -1,0 +1,52 @@
+{
+	"name": "searchBar",
+	"plugin-id": "Sprite",
+	"sid": 202079199264839,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 702,
+						"height": 88,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 484770,
+						"collisionPoly": {
+							"points": [
+								0.9985754985754985,
+								0.022438742897727272,
+								0.9985754985754985,
+								0.9715465198863636,
+								0.0014245014245014246,
+								0.9896795099431824,
+								0.0014245014245014246,
+								0.04356800426136364
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 459789958588722,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

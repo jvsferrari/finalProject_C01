@@ -1,10 +1,16 @@
 {
-	"name": "Text",
+	"name": "correctURLs",
 	"plugin-id": "Text",
 	"sid": 949038428348630,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 181856740694265
+		}
+	],
 	"effectTypes": []
 }
