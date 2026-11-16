@@ -7,7 +7,7 @@
 				{
 					"id": "on-click",
 					"objectClass": "Mouse",
-					"sid": 480480807309799,
+					"sid": 664840928657027,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked"
@@ -16,17 +16,17 @@
 				{
 					"id": "is-on-layer",
 					"objectClass": "winGUI",
-					"sid": 726087323511065,
+					"sid": 553436849999992,
 					"parameters": {
-						"layer": "\"background\""
+						"layer": "\"tabs\""
 					}
 				},
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 730336548343926,
+					"sid": 334164111335544,
 					"parameters": {
-						"first-value": "winGUI.TileAt(winGUI.PositionToTileX(Mouse.X(\"background\")),winGUI.PositionToTileY(Mouse.Y(\"background\")))",
+						"first-value": "winGUI.TileAt(winGUI.PositionToTileX(Mouse.X(\"tabs\")),winGUI.PositionToTileY(Mouse.Y(\"tabs\")))",
 						"comparison": 0,
 						"second-value": "83"
 					}
@@ -34,7 +34,7 @@
 				{
 					"id": "pick-all",
 					"objectClass": "System",
-					"sid": 199308225626235,
+					"sid": 667324651527292,
 					"parameters": {
 						"object": "winGUI"
 					}
@@ -42,17 +42,17 @@
 				{
 					"id": "is-on-layer",
 					"objectClass": "winGUI",
-					"sid": 570867495212601,
+					"sid": 147323317260369,
 					"parameters": {
-						"layer": "\"popup\""
+						"layer": "\"help\""
 					}
 				},
 				{
 					"id": "is-on-layer",
 					"objectClass": "correctURLs",
-					"sid": 460476070125863,
+					"sid": 196615704786399,
 					"parameters": {
-						"layer": "\"popup\""
+						"layer": "\"help\""
 					}
 				}
 			],
@@ -60,7 +60,7 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "correctURLs",
-					"sid": 139990429179394,
+					"sid": 668257712752778,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
@@ -78,7 +78,7 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "winGUI",
-					"sid": 776451944396931,
+					"sid": 582177230187375,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
@@ -94,7 +94,7 @@
 					}
 				}
 			],
-			"sid": 566855666060871
+			"sid": 762058168188678
 		},
 		{
 			"eventType": "block",
@@ -102,7 +102,7 @@
 				{
 					"id": "on-click",
 					"objectClass": "Mouse",
-					"sid": 642491550496107,
+					"sid": 107058928603515,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked"
@@ -111,25 +111,25 @@
 				{
 					"id": "is-on-layer",
 					"objectClass": "winGUI",
-					"sid": 404377848064024,
+					"sid": 692807357506120,
 					"parameters": {
-						"layer": "\"popup\""
+						"layer": "\"help\""
 					}
 				},
 				{
 					"id": "is-on-layer",
 					"objectClass": "correctURLs",
-					"sid": 621780707621650,
+					"sid": 112753455243435,
 					"parameters": {
-						"layer": "\"popup\""
+						"layer": "\"help\""
 					}
 				},
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 679649806618641,
+					"sid": 880861551447514,
 					"parameters": {
-						"first-value": "winGUI.TileAt(winGUI.PositionToTileX(Mouse.X(\"popup\")),winGUI.PositionToTileY(Mouse.Y(\"popup\")))",
+						"first-value": "winGUI.TileAt(winGUI.PositionToTileX(Mouse.X(\"help\")),winGUI.PositionToTileY(Mouse.Y(\"help\")))",
 						"comparison": 0,
 						"second-value": "68"
 					}
@@ -139,7 +139,7 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "correctURLs",
-					"sid": 605986067451237,
+					"sid": 808992824445125,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
@@ -157,7 +157,7 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "winGUI",
-					"sid": 413700560275641,
+					"sid": 871311736846559,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
@@ -173,7 +173,7 @@
 					}
 				}
 			],
-			"sid": 550395081831984
+			"sid": 494240174852292
 		},
 		{
 			"eventType": "block",
@@ -196,22 +196,18 @@
 				{
 					"id": "load",
 					"objectClass": "arrFakeURLs",
-					"sid": 522321007409094,
+					"sid": 725846285291475,
 					"parameters": {
-						"json": "\"{\"\"c2array\"\":true,\"\"size\"\":[13,1,1],\"\"data\"\":[[[\"\"gogle.com\"\"]],[[\"\"metube.com\"\"]],[[\"\"wikipekia.org\"\"]],[[\"\"fakebook.com\"\"]],[[\"\"instagran.com\"\"]],[[\"\"y.com\"\"]],[[\"\"redit.com\"\"]],[[\"\"netfIix.com\"\"]],[[\"\"linkedout.com\"\"]],[[\"\"gitpub.com\"\"]],[[\"\"rnicrosoft.com\"\"]],[[\"\"aplle.com\"\"]],[[\"\"twich.tv\"\"]]]}\""
+						"json": "\"{\"\"c2array\"\":true,\"\"size\"\":[13,1,1],\"\"data\"\":[[[\"\"gogle.com\"\"]],[[\"\"metube.com\"\"]],[[\"\"wikipekia.org\"\"]],[[\"\"fakebook.com\"\"]],[[\"\"instagran.com\"\"]],[[\"\"y.com\"\"]],[[\"\"redit.com\"\"]],[[\"\"betflix.com\"\"]],[[\"\"linkedout.com\"\"]],[[\"\"gitpub.com\"\"]],[[\"\"rnicrosoft.com\"\"]],[[\"\"aplle.com\"\"]],[[\"\"twich.tv\"\"]]]}\""
 					}
 				},
 				{
 					"id": "load",
 					"objectClass": "arrSorteio",
-					"sid": 102461862192617,
+					"sid": 493291950043814,
 					"parameters": {
-						"json": "\"{\"\"c2array\"\":true,\"\"size\"\":[26,1,1],\"\"data\"\":[[[\"\"google.com\"\"]],[[\"\"youtube.com\"\"]],[[\"\"wikipedia.org\"\"]],[[\"\"facebook.com\"\"]],[[\"\"instagram.com\"\"]],[[\"\"x.com\"\"]],[[\"\"reddit.com\"\"]],[[\"\"netflix.com\"\"]],[[\"\"linkedin.com\"\"]],[[\"\"github.com\"\"]],[[\"\"microsoft.com\"\"]],[[\"\"apple.com\"\"]],[[\"\"twitch.tv\"\"]],[[\"\"gogle.com\"\"]],[[\"\"metube.com\"\"]],[[\"\"wikipekia.org\"\"]],[[\"\"fakebook.com\"\"]],[[\"\"instagran.com\"\"]],[[\"\"y.com\"\"]],[[\"\"redit.com\"\"]],[[\"\"netfIix.com\"\"]],[[\"\"linkedout.com\"\"]],[[\"\"gitpub.com\"\"]],[[\"\"rnicrosoft.com\"\"]],[[\"\"aplle.com\"\"]],[[\"\"twich.tv\"\"]]]}\""
+						"json": "\"{\"\"c2array\"\":true,\"\"size\"\":[26,1,1],\"\"data\"\":[[[\"\"google.com\"\"]],[[\"\"youtube.com\"\"]],[[\"\"wikipedia.org\"\"]],[[\"\"facebook.com\"\"]],[[\"\"instagram.com\"\"]],[[\"\"x.com\"\"]],[[\"\"reddit.com\"\"]],[[\"\"netflix.com\"\"]],[[\"\"linkedin.com\"\"]],[[\"\"github.com\"\"]],[[\"\"microsoft.com\"\"]],[[\"\"apple.com\"\"]],[[\"\"twitch.tv\"\"]],[[\"\"gogle.com\"\"]],[[\"\"metube.com\"\"]],[[\"\"wikipekia.org\"\"]],[[\"\"fakebook.com\"\"]],[[\"\"instagran.com\"\"]],[[\"\"y.com\"\"]],[[\"\"redit.com\"\"]],[[\"\"betflix.com\"\"]],[[\"\"linkedout.com\"\"]],[[\"\"gitpub.com\"\"]],[[\"\"rnicrosoft.com\"\"]],[[\"\"aplle.com\"\"]],[[\"\"twich.tv\"\"]]]}\""
 					}
-				},
-				{
-					"callFunction": "changeURL",
-					"sid": 457634133336367
 				}
 			],
 			"sid": 156926482699092
@@ -384,6 +380,54 @@
 			]
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 259311842003343,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "closeTab"
+					}
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "closeTab",
+					"sid": 922532147621116,
+					"parameters": {
+						"layer": "\"instructions\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "changeURL",
+					"sid": 159975772045127
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 900013628447622,
+					"parameters": {
+						"layer": "\"instructions\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 135475622118740,
+					"parameters": {
+						"layer": "\"tabs\"",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 688725739096895
+		},
+		{
 			"functionName": "addError",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -501,16 +545,6 @@
 						"comparison": 4,
 						"value": "10"
 					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "controller",
-					"sid": 616053531480041,
-					"parameters": {
-						"instance-variable": "errors",
-						"comparison": 0,
-						"value": "3"
-					}
 				}
 			],
 			"actions": [
@@ -524,6 +558,42 @@
 				}
 			],
 			"sid": 412470434383614,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "controller",
+					"sid": 921318545710236,
+					"parameters": {
+						"instance-variable": "errors",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-nextprevious-layout",
+					"objectClass": "System",
+					"sid": 940212641048997,
+					"parameters": {
+						"which": "previous"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 262193159814692,
+					"parameters": {
+						"variable": "HP",
+						"value": "30"
+					}
+				}
+			],
+			"sid": 495778211362467,
 			"isOrBlock": true
 		},
 		{

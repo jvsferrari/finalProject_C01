@@ -596,12 +596,13 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-click",
+					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 420971805949060,
+					"sid": 623779919004513,
 					"parameters": {
 						"mouse-button": "left",
-						"click-type": "clicked"
+						"click-type": "clicked",
+						"object-clicked": "downloadsIcon"
 					}
 				}
 			],
@@ -610,18 +611,7 @@
 			"children": [
 				{
 					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 983477518771643,
-							"parameters": {
-								"first-value": "icons1.TileAt(icons1.PositionToTileX(Mouse.X(\"icons\")),icons1.PositionToTileY(Mouse.Y(\"icons\")))",
-								"comparison": 0,
-								"second-value": "15"
-							}
-						}
-					],
+					"conditions": [],
 					"actions": [
 						{
 							"id": "go-to-layout",
@@ -650,37 +640,115 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-click",
+					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 977670646937601,
+					"sid": 728183068185724,
 					"parameters": {
 						"mouse-button": "left",
-						"click-type": "clicked"
+						"click-type": "clicked",
+						"object-clicked": "documentsIcon"
 					}
 				}
 			],
 			"actions": [],
-			"sid": 385790110266255,
+			"sid": 638480723850258,
 			"children": [
 				{
 					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 439553345472071,
-							"parameters": {
-								"first-value": "icons1.TileAt(icons1.PositionToTileX(Mouse.X(\"icons\")),icons1.PositionToTileY(Mouse.Y(\"icons\")))",
-								"comparison": 0,
-								"second-value": "24"
-							}
-						}
-					],
+					"conditions": [],
 					"actions": [
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 609526501388025,
+							"sid": 606614932391988,
+							"parameters": {
+								"layout": "documentos"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 167270347064174,
+							"parameters": {
+								"variable": "currentLayout",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 770013488828170,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 497023690646613,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "codesIcon"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 379761726473692,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 713651866691641,
+							"parameters": {
+								"layout": "codigos"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 738031030809736,
+							"parameters": {
+								"variable": "currentLayout",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 210656255471927,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 759650800048166,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "spreadsheetsIcon"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 548402348011715,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 248375411571412,
 							"parameters": {
 								"layout": "planilhas"
 							}
@@ -688,133 +756,17 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 199961555983760,
+							"sid": 695893963044548,
 							"parameters": {
 								"variable": "currentLayout",
-								"value": "4"
+								"value": "3"
 							}
 						}
 					],
-					"sid": 957691147728634,
+					"sid": 936162469959932,
 					"isOrBlock": true
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-click",
-					"objectClass": "Mouse",
-					"sid": 158896107828825,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 999258270468969,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 164253507838254,
-							"parameters": {
-								"first-value": "icons1.TileAt(icons1.PositionToTileX(Mouse.X(\"icons\")),icons1.PositionToTileY(Mouse.Y(\"icons\")))",
-								"comparison": 0,
-								"second-value": "22"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 769752116024644,
-							"parameters": {
-								"layout": "documentos"
-							}
-						}
-					],
-					"sid": 880539740897978,
-					"isOrBlock": true
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-click",
-					"objectClass": "Mouse",
-					"sid": 840234230137245,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 444191685187212,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 460802572115327,
-							"parameters": {
-								"first-value": "icons1.TileAt(icons1.PositionToTileX(Mouse.X(\"icons\")),icons1.PositionToTileY(Mouse.Y(\"icons\")))",
-								"comparison": 0,
-								"second-value": "14"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 190250022442757,
-							"parameters": {
-								"layout": "codigos"
-							}
-						}
-					],
-					"sid": 882996746747656,
-					"isOrBlock": true
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-click",
-					"objectClass": "Mouse",
-					"sid": 853589350112804,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "log",
-					"objectClass": "Browser",
-					"sid": 969889102114204,
-					"parameters": {
-						"type": "log",
-						"message": "\"uid \" & icons3.UID & \" | layer \" & icons3.LayerName & \" | tile \" & icons3.TileAt(icons3.PositionToTileX(Mouse.X(\"icons\")), icons3.PositionToTileY(Mouse.Y(\"icons\")))"
-					}
-				}
-			],
-			"sid": 267339670769125
 		}
 	],
 	"sid": 263166794968315

@@ -148,7 +148,11 @@
 			"errorBox2",
 			"errorBox3",
 			"controller",
-			"arrSorteio"
+			"arrSorteio",
+			"instructionsPopUp",
+			"instructions",
+			"enterKey",
+			"Sprite"
 		],
 		"subfolders": []
 	},

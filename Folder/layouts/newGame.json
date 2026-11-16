@@ -265,63 +265,6 @@
 					}
 				},
 				{
-					"type": "icons1",
-					"properties": {
-						"initially-visible": false,
-						"tile-width": 128,
-						"tile-height": 128,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0,
-						"tile-x-drawing-offset": 0,
-						"tile-y-drawing-offset": 0,
-						"drawing-mode": "top-to-right"
-					},
-					"uid": 15,
-					"sid": 629510186609803,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"ownData": {
-						"tilemapData": {
-							"width": 8,
-							"height": 4,
-							"max-width": 8,
-							"max-height": 4,
-							"data": "13x0,16,0,23,5x0,25,0,15,8x0"
-						},
-						"tile-width": 128,
-						"tile-height": 128,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0
-					},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 96,
-						"y": 16,
-						"width": 1088,
-						"height": 560,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0
-					}
-				},
-				{
 					"type": "levels",
 					"properties": {
 						"text": "Downloads",
@@ -511,6 +454,142 @@
 						"height": 64,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "downloadsIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 15,
+					"sid": 408137772629750,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 478,
+						"y": 200,
+						"width": 128,
+						"height": 128,
+						"originX": -0.02459016393442623,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "codesIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 30,
+					"sid": 529180243615287,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 870.6,
+						"y": 439.43859649122805,
+						"width": 134,
+						"height": 144,
+						"originX": 1.1,
+						"originY": 0.4649122807017544,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "spreadsheetsIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 65,
+					"sid": 694111032169627,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1220,
+						"y": -121,
+						"width": 106,
+						"height": 132,
+						"originX": 4.402439024390244,
+						"originY": -1.9150943396226414,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "documentsIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 66,
+					"sid": 617033113579541,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 251.73170731707316,
+						"y": 273.85849056603774,
+						"width": 120,
+						"height": 139,
+						"originX": -1.8414634146341464,
+						"originY": -0.7075471698113207,
 						"color": [
 							1,
 							1,

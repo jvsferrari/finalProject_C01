@@ -12,16 +12,6 @@
 			"sid": 685020455152062
 		},
 		{
-			"eventType": "variable",
-			"name": "enemy",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 670473080424607
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -42,186 +32,6 @@
 				}
 			],
 			"sid": 807484311410295
-		},
-		{
-			"functionName": "spawnEnemy",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 509077708929206,
-					"parameters": {
-						"variable": "enemy",
-						"value": "choose(1, 2, 3, 4, 5)"
-					}
-				}
-			],
-			"sid": 610443875918314,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 904075876794181,
-							"parameters": {
-								"first-value": "enemy",
-								"comparison": 0,
-								"second-value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 686519406030291,
-							"parameters": {
-								"object-to-create": "bitcoinMiner",
-								"layer": "\"enemies\"",
-								"x": "random(0, 1280)",
-								"y": "random(0, 720)",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						}
-					],
-					"sid": 721546479719355
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 418793293201380,
-							"parameters": {
-								"first-value": "enemy",
-								"comparison": 0,
-								"second-value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 295875895372709,
-							"parameters": {
-								"object-to-create": "fakeLogin",
-								"layer": "\"enemies\"",
-								"x": "random(0, 1280)",
-								"y": "random(0, 720)",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						}
-					],
-					"sid": 147496412502100
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 131312209021196,
-							"parameters": {
-								"first-value": "enemy",
-								"comparison": 0,
-								"second-value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 382278997330134,
-							"parameters": {
-								"object-to-create": "keylogger",
-								"layer": "\"enemies\"",
-								"x": "random(0, 1280)",
-								"y": "random(0, 720)",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						}
-					],
-					"sid": 161354071899232
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 972416108848256,
-							"parameters": {
-								"first-value": "enemy",
-								"comparison": 0,
-								"second-value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 133964611719930,
-							"parameters": {
-								"object-to-create": "trojan",
-								"layer": "\"enemies\"",
-								"x": "random(0, 1280)",
-								"y": "random(0, 720)",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						}
-					],
-					"sid": 776831236610978
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 297957497434758,
-							"parameters": {
-								"first-value": "enemy",
-								"comparison": 0,
-								"second-value": "5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 787257333084730,
-							"parameters": {
-								"object-to-create": "wiper",
-								"layer": "\"enemies\"",
-								"x": "random(0, 1280)",
-								"y": "random(0, 720)",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						}
-					],
-					"sid": 888844425081509
-				}
-			]
 		},
 		{
 			"eventType": "block",
@@ -327,6 +137,27 @@
 				}
 			],
 			"sid": 880309292541985
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 244625066952754
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "hpBar",
+					"sid": 802703314947342,
+					"parameters": {
+						"width": "hpBar.Width*(HP/100)"
+					}
+				}
+			],
+			"sid": 501023325945713
 		}
 	],
 	"sid": 694664222126839
