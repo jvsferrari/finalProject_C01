@@ -393,7 +393,9 @@
 					"uid": 61,
 					"sid": 194019454409195,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"trojan": false
+					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
 					"showing": true,

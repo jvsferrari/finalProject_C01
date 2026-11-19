@@ -12,6 +12,26 @@
 			"sid": 685020455152062
 		},
 		{
+			"eventType": "variable",
+			"name": "currentEnemy",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 633093487753895
+		},
+		{
+			"eventType": "variable",
+			"name": "enemyDefeated",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 568939475201394
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -29,9 +49,73 @@
 						"x": "750",
 						"y": "500"
 					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "hpBar",
+					"sid": 715479522694552,
+					"parameters": {
+						"width": "hpBar.Width*(HP/100)"
+					}
 				}
 			],
-			"sid": 807484311410295
+			"sid": 807484311410295,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 382684249252031,
+							"parameters": {
+								"variable": "enemyDefeated"
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "enemies",
+							"sid": 943171190673913,
+							"parameters": {
+								"unique-id": "currentEnemy"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "enemies",
+							"sid": 308815463086999
+						}
+					],
+					"sid": 406668928772028
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 728846089407426,
+							"parameters": {
+								"object": "enemies"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "enemies",
+							"sid": 623420715513853,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"speed": "50"
+							}
+						}
+					],
+					"sid": 526279471689340
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -95,16 +179,16 @@
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 318990186303717,
+					"sid": 573158994634183,
 					"parameters": {
 						"variable": "HP",
-						"value": "25"
+						"value": "35"
 					}
 				},
 				{
 					"id": "set-width",
 					"objectClass": "hpBar",
-					"sid": 981776623386872,
+					"sid": 602576492325569,
 					"parameters": {
 						"width": "hpBar.Width*(HP/100)"
 					}
@@ -128,6 +212,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 528486062812114,
+					"parameters": {
+						"variable": "currentEnemy",
+						"value": "enemies.UID"
+					}
+				},
+				{
 					"id": "go-to-layout-by-name",
 					"objectClass": "System",
 					"sid": 298012534312177,
@@ -142,22 +235,83 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
+					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 244625066952754
+					"sid": 843650732508175
 				}
 			],
 			"actions": [
 				{
-					"id": "set-width",
-					"objectClass": "hpBar",
-					"sid": 802703314947342,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 116326471603752,
 					"parameters": {
-						"width": "hpBar.Width*(HP/100)"
+						"variable": "currentLayout",
+						"value": "LayoutName"
 					}
 				}
 			],
-			"sid": 501023325945713
+			"sid": 240919852661727
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 553306819993298,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "log",
+					"objectClass": "Browser",
+					"sid": 252985133990833,
+					"parameters": {
+						"type": "log",
+						"message": "currentLayout"
+					}
+				}
+			],
+			"sid": 570649968453996
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 756142724274171,
+					"parameters": {
+						"variable": "HP",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 271036749306128,
+					"parameters": {
+						"variable": "currentLayout",
+						"value": "\"newGame\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 487235715792120,
+					"parameters": {
+						"layout": "newGame"
+					}
+				}
+			],
+			"sid": 709413939072668
 		}
 	],
 	"sid": 694664222126839

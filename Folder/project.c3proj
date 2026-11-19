@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 50603,
+	"savedWithRelease": 50604,
 	"name": "final",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -71,6 +71,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Flash",
 			"name": "Flash",
 			"author": "Scirra",
@@ -78,8 +85,22 @@
 		},
 		{
 			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pathfinding",
 			"name": "Pathfinding",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Persist",
+			"name": "Persist",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -152,7 +173,16 @@
 			"instructionsPopUp",
 			"instructions",
 			"enterKey",
-			"Sprite"
+			"conveyor",
+			"ponto",
+			"Tilemap",
+			"quarentine",
+			"Sprite2",
+			"err1",
+			"err2",
+			"Sprite",
+			"serverRack",
+			"key"
 		],
 		"subfolders": []
 	},
@@ -177,9 +207,9 @@
 			{
 				"items": [
 					"downloads",
-					"documentos",
-					"planilhas",
-					"codigos"
+					"documents",
+					"spreadsheets",
+					"codes"
 				],
 				"subfolders": [],
 				"name": "Levels"

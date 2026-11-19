@@ -476,52 +476,42 @@
 					"uid": 15,
 					"sid": 408137772629750,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"currentPosition": 0,
+						"trojan": false
+					},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						},
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
 					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 478,
-						"y": 200,
+						"x": 532,
+						"y": 190,
 						"width": 128,
 						"height": 128,
-						"originX": -0.02459016393442623,
+						"originX": 0.5081967213114754,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "codesIcon",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 30,
-					"sid": 529180243615287,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 870.6,
-						"y": 439.43859649122805,
-						"width": 134,
-						"height": 144,
-						"originX": 1.1,
-						"originY": 0.4649122807017544,
 						"color": [
 							1,
 							1,
@@ -544,18 +534,42 @@
 					"uid": 65,
 					"sid": 694111032169627,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"currentPosition": 0,
+						"trojan": false
+					},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						},
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
 					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1220,
-						"y": -121,
+						"x": 804,
+						"y": 201,
 						"width": 106,
 						"height": 132,
-						"originX": 4.402439024390244,
-						"originY": -1.9150943396226414,
+						"originX": 0.5121951219512195,
+						"originY": 0.5188679245283019,
 						"color": [
 							1,
 							1,
@@ -578,18 +592,100 @@
 					"uid": 66,
 					"sid": 617033113579541,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"currentPosition": 0,
+						"trojan": false
+					},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						},
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
 					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 251.73170731707316,
-						"y": 273.85849056603774,
+						"x": 540,
+						"y": 447,
 						"width": 120,
 						"height": 139,
-						"originX": -1.8414634146341464,
-						"originY": -0.7075471698113207,
+						"originX": 0.5,
+						"originY": 0.5094339622641509,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "codesIcon",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 30,
+					"sid": 529180243615287,
+					"tags": "",
+					"instanceVariables": {
+						"currentPosition": 0,
+						"trojan": false
+					},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						},
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 799,
+						"y": 445,
+						"width": 134,
+						"height": 144,
+						"originX": 0.5363636363636364,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -603,7 +699,7 @@
 			],
 			"sid": 524314449298773,
 			"effectTypes": [],
-			"isInitiallyVisible": true,
+			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
 			"color": [

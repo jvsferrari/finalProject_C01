@@ -1,0 +1,16 @@
+{
+	"name": "key",
+	"plugin-id": "Text",
+	"sid": 247007923045955,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 149271388845765
+		}
+	],
+	"effectTypes": []
+}

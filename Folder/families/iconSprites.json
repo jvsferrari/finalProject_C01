@@ -2,8 +2,39 @@
 	"name": "iconSprites",
 	"plugin-id": "Sprite",
 	"sid": 289509075066077,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "currentPosition",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 695432045612424
+		},
+		{
+			"name": "trojan",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 468889387537919
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 947751611023058
+		},
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 938489659698475
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 683355171105385
+		}
+	],
 	"effectTypes": [],
 	"members": [
 		"downloadsIcon",

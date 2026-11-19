@@ -2,11 +2,10 @@
 	"name": "telaInicial",
 	"events": [
 		{
-			"bookmark": true,
 			"eventType": "variable",
 			"name": "currentLayout",
-			"type": "number",
-			"initialValue": "1",
+			"type": "string",
+			"initialValue": "\"start\"",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -44,13 +43,23 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "currentTime2",
+			"name": "currentTime",
 			"type": "number",
 			"initialValue": "9",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 757785565482392
+		},
+		{
+			"eventType": "variable",
+			"name": "introRan",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 978044119107139
 		},
 		{
 			"eventType": "block",
@@ -63,11 +72,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 140864552628146,
+					"sid": 933451336591192,
 					"parameters": {
 						"variable": "currentLayout",
 						"comparison": 0,
-						"value": "1"
+						"value": "\"start\""
 					}
 				}
 			],
@@ -135,23 +144,13 @@
 						"click-type": "clicked",
 						"object-clicked": "start"
 					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 846089783367382,
-					"parameters": {
-						"variable": "currentLayout",
-						"comparison": 0,
-						"value": "1"
-					}
 				}
 			],
 			"actions": [
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 106089602905549,
+					"sid": 185058672650445,
 					"parameters": {
 						"layout": "newGame"
 					}
@@ -159,10 +158,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 621944022616265,
+					"sid": 221718010980470,
 					"parameters": {
 						"variable": "currentLayout",
-						"value": "2"
+						"value": "\"newGame\""
 					}
 				}
 			],
@@ -184,11 +183,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 201784520701297,
+					"sid": 850608152490238,
 					"parameters": {
 						"variable": "currentLayout",
 						"comparison": 0,
-						"value": "1"
+						"value": "\"start\""
 					}
 				}
 			],
@@ -216,11 +215,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 990375883496281,
+					"sid": 468482361459725,
 					"parameters": {
 						"variable": "currentLayout",
 						"comparison": 0,
-						"value": "1"
+						"value": "\"start\""
 					}
 				}
 			],
@@ -418,16 +417,16 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 598043369223336
+					"sid": 776415088208250
 				},
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 724296410653527,
+					"sid": 664091930518337,
 					"parameters": {
 						"variable": "currentLayout",
 						"comparison": 0,
-						"value": "2"
+						"value": "\"newGame\""
 					}
 				}
 			],
@@ -493,12 +492,105 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 604199890682392
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 905497734585694,
+					"parameters": {
+						"variable": "introRan"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 817272904100246,
+					"parameters": {
+						"layer": "\"pc\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "icons3",
+					"sid": 857876148222905,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 307439202180572,
+					"parameters": {
+						"layer": "\"icons\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "iconSprites",
+					"sid": 653019203471609,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.5",
+						"off-time": "0.3",
+						"duration": "9999999"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "levels",
+					"sid": 842599657588294,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 716835653717667,
+					"parameters": {
+						"layer": "\"clock\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 971198612687651,
+					"parameters": {
+						"variable": "introRan",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 467262978294181
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-animation-finished",
 					"objectClass": "pixelartillustrationworkdeskbackgroundgimped",
 					"sid": 562422320796549,
 					"parameters": {
 						"animation": "\"closingTabs\""
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 648567951851530,
+					"parameters": {
+						"variable": "introRan"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -511,9 +603,18 @@
 					}
 				},
 				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 718125248264914,
+					"parameters": {
+						"layer": "\"icons\"",
+						"visibility": "visible"
+					}
+				},
+				{
 					"id": "flash",
-					"objectClass": "icons1",
-					"sid": 846676658714175,
+					"objectClass": "iconSprites",
+					"sid": 603487732727258,
 					"behaviorType": "Flash",
 					"parameters": {
 						"on-time": "0.5",
@@ -536,6 +637,15 @@
 					"parameters": {
 						"layer": "\"clock\"",
 						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 371234537517823,
+					"parameters": {
+						"variable": "introRan",
+						"value": "true"
 					}
 				}
 			],
@@ -624,10 +734,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 984465750406618,
+							"sid": 397501908514899,
 							"parameters": {
 								"variable": "currentLayout",
-								"value": "3"
+								"value": "\"downloads\""
 							}
 						}
 					],
@@ -662,16 +772,16 @@
 							"objectClass": "System",
 							"sid": 606614932391988,
 							"parameters": {
-								"layout": "documentos"
+								"layout": "documents"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 167270347064174,
+							"sid": 776747569226272,
 							"parameters": {
 								"variable": "currentLayout",
-								"value": "3"
+								"value": "\"documents\""
 							}
 						}
 					],
@@ -706,16 +816,16 @@
 							"objectClass": "System",
 							"sid": 713651866691641,
 							"parameters": {
-								"layout": "codigos"
+								"layout": "codes"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 738031030809736,
+							"sid": 602918141130586,
 							"parameters": {
 								"variable": "currentLayout",
-								"value": "3"
+								"value": "\"codes\""
 							}
 						}
 					],
@@ -750,16 +860,16 @@
 							"objectClass": "System",
 							"sid": 248375411571412,
 							"parameters": {
-								"layout": "planilhas"
+								"layout": "spreadsheets"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 695893963044548,
+							"sid": 436089161219447,
 							"parameters": {
 								"variable": "currentLayout",
-								"value": "3"
+								"value": "\"spreadsheets\""
 							}
 						}
 					],

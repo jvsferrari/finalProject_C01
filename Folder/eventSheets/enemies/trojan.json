@@ -1,5 +1,451 @@
 {
 	"name": "trojan",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 842804469313911
+				}
+			],
+			"actions": [
+				{
+					"id": "scroll-to-position",
+					"objectClass": "System",
+					"sid": 356282798570860,
+					"parameters": {
+						"x": "2360",
+						"y": "360"
+					}
+				}
+			],
+			"sid": 859753143992021,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "ponto",
+							"sid": 181710163517525,
+							"parameters": {
+								"instance-variable": "position",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-position",
+							"objectClass": "iconSprites",
+							"sid": 593048668867541,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "ponto.X",
+								"y": "ponto.Y",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 418009705424197
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "iconSprites",
+							"sid": 304014997663201,
+							"parameters": {
+								"instance-variable": "trojan"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "iconSprites",
+							"sid": 451522037706394,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "3",
+								"off-time": "0.1",
+								"duration": "99999999"
+							}
+						}
+					],
+					"sid": 597491657328851
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-arrived",
+					"objectClass": "iconSprites",
+					"sid": 690256732710164,
+					"behaviorType": "MoveTo"
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "iconSprites",
+					"sid": 515694947656376,
+					"parameters": {
+						"instance-variable": "currentPosition",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 982632774325275,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "iconSprites",
+							"sid": 171562430160834,
+							"parameters": {
+								"instance-variable": "currentPosition",
+								"comparison": 0,
+								"value": "14"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "iconSprites",
+							"sid": 856305511300091,
+							"parameters": {
+								"instance-variable": "currentPosition",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 155172875454757
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "ponto",
+							"sid": 410021288281721,
+							"parameters": {
+								"instance-variable": "position",
+								"comparison": 0,
+								"value": "iconSprites.currentPosition"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-position",
+							"objectClass": "iconSprites",
+							"sid": 200589624788264,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "ponto.X",
+								"y": "ponto.Y",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 126909948655543
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "iconSprites",
+					"sid": 448583033308320,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 968032250049898,
+					"parameters": {
+						"first-value": "iconSprites.BBoxLeft",
+						"comparison": 5,
+						"second-value": "quarentine.BBoxLeft"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 827548857026588,
+					"parameters": {
+						"first-value": "iconSprites.BBoxRight",
+						"comparison": 3,
+						"second-value": "quarentine.BBoxRight"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 469039193781943,
+					"parameters": {
+						"first-value": "iconSprites.BBoxTop",
+						"comparison": 5,
+						"second-value": "quarentine.BBoxTop"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 587950628739604,
+					"parameters": {
+						"first-value": "iconSprites.BBoxBottom",
+						"comparison": 3,
+						"second-value": "quarentine.BBoxBottom"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "iconSprites",
+					"sid": 159368490985052,
+					"parameters": {
+						"instance-variable": "trojan"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "iconSprites",
+					"sid": 385834693816525,
+					"behaviorType": "MoveTo"
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "iconSprites",
+					"sid": 723094408284936,
+					"parameters": {
+						"instance-variable": "currentPosition",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "iconSprites",
+					"sid": 708457807364190,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "controller",
+					"sid": 494109642771819,
+					"parameters": {
+						"instance-variable": "corrects",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 144326676804115,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 797200077656171,
+							"parameters": {
+								"instance-variable": "corrects",
+								"comparison": 5,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 824237487780635,
+							"parameters": {
+								"variable": "enemyDefeated",
+								"value": "true"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 506401385691062,
+							"parameters": {
+								"layout": "currentLayout"
+							}
+						}
+					],
+					"sid": 407917986382820
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "iconSprites",
+					"sid": 392266927804936,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 106310607353056,
+					"parameters": {
+						"first-value": "iconSprites.BBoxLeft",
+						"comparison": 5,
+						"second-value": "quarentine.BBoxLeft"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 634611497720038,
+					"parameters": {
+						"first-value": "iconSprites.BBoxRight",
+						"comparison": 3,
+						"second-value": "quarentine.BBoxRight"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 432388578439752,
+					"parameters": {
+						"first-value": "iconSprites.BBoxTop",
+						"comparison": 5,
+						"second-value": "quarentine.BBoxTop"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 994968046691430,
+					"parameters": {
+						"first-value": "iconSprites.BBoxBottom",
+						"comparison": 3,
+						"second-value": "quarentine.BBoxBottom"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "iconSprites",
+					"sid": 531349934802295,
+					"parameters": {
+						"instance-variable": "trojan"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "controller",
+					"sid": 892705641922146,
+					"parameters": {
+						"instance-variable": "errors",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 635705086097852,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 920603362999569,
+							"parameters": {
+								"instance-variable": "errors",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "err1",
+							"sid": 425014804183634,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 830532394149537
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 308476276374908,
+							"parameters": {
+								"instance-variable": "errors",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "err2",
+							"sid": 859844773969806,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 649666041831511,
+							"parameters": {
+								"variable": "HP",
+								"value": "35"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 848956241595602,
+							"parameters": {
+								"layout": "currentLayout"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 177483331224514,
+							"parameters": {
+								"variable": "enemyDefeated",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 226644224000107
+				}
+			]
+		}
+	],
 	"sid": 477518461029020
 }

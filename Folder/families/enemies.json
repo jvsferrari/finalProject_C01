@@ -16,6 +16,11 @@
 			"behaviorId": "Pathfinding",
 			"name": "Pathfinding",
 			"sid": 260084923485955
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 507160539107924
 		}
 	],
 	"effectTypes": [],

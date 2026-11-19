@@ -473,7 +473,8 @@
 						"currentURL": "",
 						"errors": 0,
 						"URLcount": 0,
-						"index": 0
+						"index": 0,
+						"corrects": 0
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
@@ -802,9 +803,9 @@
 						"tilemapData": {
 							"width": 5,
 							"height": 11,
-							"max-width": 36,
+							"max-width": 5,
 							"max-height": 11,
-							"data": "0,7,8x36,22,0,8,8x20,23,0,8,8x20,23,0,8,8x20,23,0,69,8x52,24,45x0,9x80,2x0,9x80,2x0,9x80,2x0,9x80,2x0,9x80,2x0,9x80,2x0,9x80,2x0,9x80,2x0,9x80,2x0,9x80,2x0,9x80,2x0,9x80,166x0"
+							"data": "0,7,8x36,22,0,8,8x20,23,0,8,8x20,23,0,8,8x20,23,0,69,8x52,24"
 						},
 						"tile-width": 64,
 						"tile-height": 64,

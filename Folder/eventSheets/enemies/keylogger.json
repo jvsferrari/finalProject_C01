@@ -1,5 +1,270 @@
 {
 	"name": "keylogger",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 808477441434076,
+					"parameters": {
+						"interval-seconds": "random(0.3,0.5)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 529568396301841,
+					"parameters": {
+						"object-to-create": "key",
+						"layer": "\"keys\"",
+						"x": "random(250,1030)",
+						"y": "600",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "key",
+					"sid": 840201818626903,
+					"parameters": {
+						"text": "mid(\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\", floor(random(62)), 1)"
+					}
+				},
+				{
+					"id": "set-font-color",
+					"objectClass": "key",
+					"sid": 995578829217570,
+					"parameters": {
+						"color": "HexColor(\"#a600ff\")"
+					}
+				},
+				{
+					"id": "set-font-face",
+					"objectClass": "key",
+					"sid": 807286099416905,
+					"parameters": {
+						"font-face": "\"Jersey25-Regular\"",
+						"style": "normal"
+					}
+				},
+				{
+					"id": "set-font-size",
+					"objectClass": "key",
+					"sid": 628531404983429,
+					"parameters": {
+						"size-pt": "60"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "key",
+					"sid": 336775358590080,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"speed": "80"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "key",
+					"sid": 310852203610362,
+					"parameters": {
+						"width": "key.TextWidth + 8"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "key",
+					"sid": 900166984904626,
+					"parameters": {
+						"height": "key.TextHeight + 8"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "key",
+					"sid": 428361033188216,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "serverRack",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 512519573409941
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 510718930182524,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "key"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "key",
+					"sid": 578667358288071
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "controller",
+					"sid": 174643122727295,
+					"parameters": {
+						"instance-variable": "corrects",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 957098711788597,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 834843056713035,
+							"parameters": {
+								"instance-variable": "corrects",
+								"comparison": 5,
+								"value": "15"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 406248993473886,
+							"parameters": {
+								"variable": "enemyDefeated",
+								"value": "true"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 266486152730271,
+							"parameters": {
+								"layout": "currentLayout"
+							}
+						}
+					],
+					"sid": 182563551915645
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 665671079556847,
+					"parameters": {
+						"object": "key"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 601682574106608,
+					"parameters": {
+						"first-value": "key.BBoxTop",
+						"comparison": 3,
+						"second-value": "serverRack.BBoxBottom"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 617968133090024,
+					"parameters": {
+						"first-value": "key.X",
+						"comparison": 5,
+						"second-value": "serverRack.BBoxLeft"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 320597873400603,
+					"parameters": {
+						"first-value": "key.X",
+						"comparison": 3,
+						"second-value": "serverRack.BBoxRight"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "key",
+					"sid": 221939651238449
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "controller",
+					"sid": 870195370300988,
+					"parameters": {
+						"instance-variable": "errors",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 230515452469187,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 211389583914572,
+							"parameters": {
+								"instance-variable": "errors",
+								"comparison": 5,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 690503371062255,
+							"parameters": {
+								"variable": "enemyDefeated",
+								"value": "false"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 755667268844828,
+							"parameters": {
+								"layout": "currentLayout"
+							}
+						}
+					],
+					"sid": 467977468181685
+				}
+			]
+		}
+	],
 	"sid": 959984568111977
 }

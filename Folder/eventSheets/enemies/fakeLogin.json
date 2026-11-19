@@ -208,6 +208,11 @@
 					"parameters": {
 						"json": "\"{\"\"c2array\"\":true,\"\"size\"\":[26,1,1],\"\"data\"\":[[[\"\"google.com\"\"]],[[\"\"youtube.com\"\"]],[[\"\"wikipedia.org\"\"]],[[\"\"facebook.com\"\"]],[[\"\"instagram.com\"\"]],[[\"\"x.com\"\"]],[[\"\"reddit.com\"\"]],[[\"\"netflix.com\"\"]],[[\"\"linkedin.com\"\"]],[[\"\"github.com\"\"]],[[\"\"microsoft.com\"\"]],[[\"\"apple.com\"\"]],[[\"\"twitch.tv\"\"]],[[\"\"gogle.com\"\"]],[[\"\"metube.com\"\"]],[[\"\"wikipekia.org\"\"]],[[\"\"fakebook.com\"\"]],[[\"\"instagran.com\"\"]],[[\"\"y.com\"\"]],[[\"\"redit.com\"\"]],[[\"\"betflix.com\"\"]],[[\"\"linkedout.com\"\"]],[[\"\"gitpub.com\"\"]],[[\"\"rnicrosoft.com\"\"]],[[\"\"aplle.com\"\"]],[[\"\"twich.tv\"\"]]]}\""
 					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "loadingBar",
+					"sid": 667890170205673
 				}
 			],
 			"sid": 156926482699092
@@ -539,21 +544,30 @@
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "controller",
-					"sid": 462761885421929,
+					"sid": 725400033767023,
 					"parameters": {
-						"instance-variable": "URLcount",
-						"comparison": 4,
+						"instance-variable": "corrects",
+						"comparison": 0,
 						"value": "10"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-nextprevious-layout",
+					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 963573375694725,
+					"sid": 702552386270938,
 					"parameters": {
-						"which": "previous"
+						"variable": "enemyDefeated",
+						"value": "true"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 964082215402764,
+					"parameters": {
+						"layout": "currentLayout"
 					}
 				}
 			],
@@ -576,20 +590,29 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-nextprevious-layout",
+					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 940212641048997,
+					"sid": 810634161297577,
 					"parameters": {
-						"which": "previous"
+						"variable": "enemyDefeated",
+						"value": "false"
 					}
 				},
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 262193159814692,
+					"sid": 895131723965284,
 					"parameters": {
 						"variable": "HP",
-						"value": "30"
+						"value": "35"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 118984481597860,
+					"parameters": {
+						"layout": "currentLayout"
 					}
 				}
 			],
@@ -605,6 +628,14 @@
 					"sid": 235057075306805,
 					"parameters": {
 						"animation": "\"Animation 1\""
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 512423613791888,
+					"parameters": {
+						"layer": "\"tabs\""
 					}
 				}
 			],
@@ -657,6 +688,15 @@
 					],
 					"actions": [
 						{
+							"id": "add-to-instvar",
+							"objectClass": "controller",
+							"sid": 608283112537861,
+							"parameters": {
+								"instance-variable": "corrects",
+								"value": "1"
+							}
+						},
+						{
 							"callFunction": "addError",
 							"sid": 545644849598366
 						},
@@ -690,13 +730,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-two-values",
+					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 561666935764831,
+					"sid": 250750875071605,
 					"parameters": {
-						"first-value": "0",
-						"comparison": 0,
-						"second-value": "0"
+						"interval-seconds": "0.5"
 					}
 				}
 			],
@@ -704,14 +742,14 @@
 				{
 					"id": "log",
 					"objectClass": "Browser",
-					"sid": 199294829936818,
+					"sid": 393933702663794,
 					"parameters": {
 						"type": "log",
 						"message": "controller.URLcount"
 					}
 				}
 			],
-			"sid": 222512116641794
+			"sid": 819845700035032
 		}
 	],
 	"sid": 843526960137887
