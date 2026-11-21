@@ -16,6 +16,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 468889387537919
+		},
+		{
+			"name": "inside",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 686897311974794
 		}
 	],
 	"behaviorTypes": [

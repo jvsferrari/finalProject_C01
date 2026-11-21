@@ -39,7 +39,7 @@
 							"height": 12,
 							"max-width": 20,
 							"max-height": 12,
-							"data": "12x95,1,9x14,27,40,3,2x102,63vd,3x62vd,63d,2x102,63vd,42,10x102,63hv,42,10x102,62hv,42,3,9x102,62hv,42,3,102,94,6x93v,94,62hv,42,3,102,93v,6x102,93v,62hv,42,3,102,93v,102,44d,2x102,45d,102,93v,61hv,42,3,102,93v,102,101v,4x102,93v,102,42,2,102,93v,102,0,2x102,0,102,93v,2x102,3,102,93v,102,45hvd,2x102,45v,102,93v,2x102,3,102,93v,6x102,93v,2x102,3,61,94,6x93v,94,2x102,3,63,10x102,3,2x102,101,8x102,3,101,102,101,10x102,101,8x102,41,5x102,61hd,3x62hd,63hd,102,42,3x102,30,7x17,43"
+							"data": "12x95,12x0,4x27hv,3x0,45vd,2x42vd,19,0,6x96vd,94vd,3x0,42hv,7x0,94vd,3x0,42hv,7x0,94vd,45,2x0,45hd,3x0,19,103hd,2x97vd,4x94vd,2x97vd,96vd,0,3,103hd,97vd,7x0,2x96vd,3,103hd,97vd,0,44,3x17,3x0,96vd,3,103hd,5x97vd,4x0,96vd,3,103hd,4x0,97vd,3x95vd,0,96vd,4,2x30,44vd,2x0,2x95vd,3x0,96vd,3x0,27hd,2x0,95vd,4x0,96vd,3x0,27hd,0,2x95vd,4x0,96vd,5x0,95vd,1,3x27,0,1,3x17hv,2x0,94vd,17vd,4x0,18,5x0,94vd,17vd,102,5x0,3x96vd,2x94vd,17vd,102,5x0,97vd,3x0,94vd,4x0,4x97vd,3x0,94vd,4x0"
 						},
 						"tile-width": 64,
 						"tile-height": 64,
@@ -133,65 +133,10 @@
 			"global": false
 		},
 		{
-			"name": "characters",
+			"name": "enemies",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "trojan",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 59,
-					"sid": 533778215103675,
-					"tags": "",
-					"instanceVariables": {
-						"layoutName": "trojan"
-					},
-					"behaviors": {
-						"Pathfinding": {
-							"properties": {
-								"cell-size": 30,
-								"cell-border": -1,
-								"obstacles": "solids",
-								"max-speed": 20,
-								"acceleration": 1000,
-								"deceleration": 2000,
-								"rotate-speed": 135,
-								"rotate-object": false,
-								"diagonals": true,
-								"direct-movement": "to-destination",
-								"enabled": true
-							}
-						},
-						"Persist": {
-							"properties": {}
-						}
-					},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 512,
-						"y": 928,
-						"width": 64,
-						"height": 64,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
 				{
 					"type": "trojan",
 					"properties": {
@@ -233,6 +178,287 @@
 					"world": {
 						"x": 1408,
 						"y": 576,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "keylogger",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 64,
+					"sid": 879973416644578,
+					"tags": "",
+					"instanceVariables": {
+						"layoutName": "keylogger"
+					},
+					"behaviors": {
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 20,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": false,
+								"diagonals": true,
+								"direct-movement": "to-destination",
+								"enabled": true
+							}
+						},
+						"Persist": {
+							"properties": {}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 864,
+						"y": 864,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "wiper",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 57,
+					"sid": 131547184567645,
+					"tags": "",
+					"instanceVariables": {
+						"layoutName": "wiper"
+					},
+					"behaviors": {
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": true,
+								"diagonals": true,
+								"direct-movement": "to-destination",
+								"enabled": true
+							}
+						},
+						"Persist": {
+							"properties": {}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 1280,
+						"y": 128,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "bitcoinMiner",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 160,
+					"sid": 748060833185427,
+					"tags": "",
+					"instanceVariables": {
+						"layoutName": "bitcoinMiner"
+					},
+					"behaviors": {
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 50,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": false,
+								"diagonals": true,
+								"direct-movement": "to-destination",
+								"enabled": true
+							}
+						},
+						"Persist": {
+							"properties": {}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 896,
+						"y": 576,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "wiper",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 161,
+					"sid": 532339866007431,
+					"tags": "",
+					"instanceVariables": {
+						"layoutName": "wiper"
+					},
+					"behaviors": {
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": true,
+								"diagonals": true,
+								"direct-movement": "to-destination",
+								"enabled": true
+							}
+						},
+						"Persist": {
+							"properties": {}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 448,
+						"y": 384,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "bitcoinMiner",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 162,
+					"sid": 861904262302665,
+					"tags": "",
+					"instanceVariables": {
+						"layoutName": "bitcoinMiner"
+					},
+					"behaviors": {
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 50,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": false,
+								"diagonals": true,
+								"direct-movement": "to-destination",
+								"enabled": true
+							}
+						},
+						"Persist": {
+							"properties": {}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 416,
+						"y": 224,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,
@@ -401,7 +627,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"currentPosition": 0,
-						"trojan": false
+						"trojan": false,
+						"inside": false
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -429,8 +656,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 736,
-						"y": 480,
+						"x": 352,
+						"y": 704,
 						"width": 128,
 						"height": 160,
 						"originX": 0.5,
@@ -446,7 +673,7 @@
 					}
 				},
 				{
-					"type": "keylogger",
+					"type": "fakeLogin",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -454,11 +681,11 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 64,
-					"sid": 879973416644578,
+					"uid": 187,
+					"sid": 216624273042765,
 					"tags": "",
 					"instanceVariables": {
-						"layoutName": "keylogger"
+						"layoutName": "fakeLogin"
 					},
 					"behaviors": {
 						"Pathfinding": {
@@ -466,7 +693,7 @@
 								"cell-size": 30,
 								"cell-border": -1,
 								"obstacles": "solids",
-								"max-speed": 20,
+								"max-speed": 50,
 								"acceleration": 1000,
 								"deceleration": 2000,
 								"rotate-speed": 135,
@@ -484,63 +711,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1056,
-						"y": 928,
-						"width": 64,
-						"height": 64,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "wiper",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 57,
-					"sid": 131547184567645,
-					"tags": "",
-					"instanceVariables": {
-						"layoutName": "wiper"
-					},
-					"behaviors": {
-						"Pathfinding": {
-							"properties": {
-								"cell-size": 30,
-								"cell-border": -1,
-								"obstacles": "solids",
-								"max-speed": 200,
-								"acceleration": 1000,
-								"deceleration": 2000,
-								"rotate-speed": 135,
-								"rotate-object": true,
-								"diagonals": true,
-								"direct-movement": "to-destination",
-								"enabled": true
-							}
-						},
-						"Persist": {
-							"properties": {}
-						}
-					},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1280,
-						"y": 128,
+						"x": 928,
+						"y": 320,
 						"width": 64,
 						"height": 64,
 						"originX": 0.5,

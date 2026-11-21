@@ -1,5 +1,573 @@
 {
 	"name": "wiper",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 995996377819905
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 199937004381800,
+					"parameters": {
+						"tag": "currentMusic"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 798681015349337,
+					"parameters": {
+						"variable": "currentMusic",
+						"value": "\"Battle_theme_prison\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 414913037134589,
+					"parameters": {
+						"audio-file": {
+							"path": "Battle_theme_prison"
+						},
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "currentMusic"
+					}
+				}
+			],
+			"sid": 947744080984677,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 316194724755696,
+							"parameters": {
+								"variable": "musicOn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 143522969962156,
+							"parameters": {
+								"tag": "currentMusic",
+								"state": "muted"
+							}
+						}
+					],
+					"sid": 265316744345571
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 566212017640386,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "closeTab"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 280144160613744,
+					"parameters": {
+						"layer": "\"instructions\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 282550349741080,
+					"parameters": {
+						"layer": "\"instructions\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "wiperWave",
+					"sid": 885872632078525,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "scale",
+						"end-x": "20",
+						"end-y": "20",
+						"time": "30",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "wiperWave",
+					"sid": 191158508146649,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetX",
+						"end-value": "640",
+						"time": "30",
+						"ease": "easeinoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "Tilemap",
+					"sid": 580514526066729
+				}
+			],
+			"sid": 534743885351318,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 871232662807559,
+							"parameters": {
+								"variable": "soundsOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 934264313788827,
+							"parameters": {
+								"audio-file": {
+									"path": "Knife_throwing"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 185362711401110
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "iconSprites",
+					"sid": 765421662544377,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 293262408317218,
+					"parameters": {
+						"first-value": "iconSprites.BBoxLeft",
+						"comparison": 5,
+						"second-value": "quarentine.BBoxLeft"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 786778948761041,
+					"parameters": {
+						"first-value": "iconSprites.BBoxRight",
+						"comparison": 3,
+						"second-value": "quarentine.BBoxRight"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 388737929311321,
+					"parameters": {
+						"first-value": "iconSprites.BBoxTop",
+						"comparison": 5,
+						"second-value": "quarentine.BBoxTop"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 383503952132069,
+					"parameters": {
+						"first-value": "iconSprites.BBoxBottom",
+						"comparison": 3,
+						"second-value": "quarentine.BBoxBottom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "iconSprites",
+					"sid": 639543744054598,
+					"parameters": {
+						"instance-variable": "inside",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "iconSprites",
+					"sid": 174282422098709,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "controller",
+					"sid": 617957639467430,
+					"parameters": {
+						"instance-variable": "corrects",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 447795721056503,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 571519723673952,
+							"parameters": {
+								"variable": "soundsOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 216653854765927,
+							"parameters": {
+								"audio-file": {
+									"path": "Metal_detection_frame"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 482133728903231
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "iconSprites",
+					"sid": 930432623518661,
+					"parameters": {
+						"object": "wiperWave"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "iconSprites",
+					"sid": 986009274146184,
+					"parameters": {
+						"instance-variable": "inside"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "controller",
+					"sid": 744437669856969,
+					"parameters": {
+						"instance-variable": "errors",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "iconSprites",
+					"sid": 221205260247747
+				}
+			],
+			"sid": 419497322940739,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 770786856810808,
+							"parameters": {
+								"variable": "soundsOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 484431357965484,
+							"parameters": {
+								"audio-file": {
+									"path": "Trap_saw"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 975732019397566
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 444750967574895,
+							"parameters": {
+								"instance-variable": "errors",
+								"comparison": 5,
+								"value": "5"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 309325976938611
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 423867192759506,
+							"parameters": {
+								"variable": "HP",
+								"value": "35"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 660738772055333,
+							"parameters": {
+								"variable": "enemyDefeated",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 921137318795640,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 106045569801361,
+									"parameters": {
+										"variable": "soundsOn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 641637250702343,
+									"parameters": {
+										"audio-file": {
+											"path": "Punch_with_electricity"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 401177637948395
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 825044111945896,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 626854108321796,
+									"parameters": {
+										"layout": "currentLayout"
+									}
+								}
+							],
+							"sid": 480174261731431
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 909281082290676,
+					"parameters": {
+						"layer": "\"instructions\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "controller",
+					"sid": 536551280072297,
+					"parameters": {
+						"instance-variable": "errors",
+						"comparison": 2,
+						"value": "5"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 935294011692264,
+					"parameters": {
+						"first-value": "wiperWave.BBoxLeft",
+						"comparison": 3,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 325172559385281
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 578999883302313,
+					"parameters": {
+						"variable": "enemyDefeated",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 520543019519530,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 534312244488769,
+							"parameters": {
+								"variable": "soundsOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 761861502027326,
+							"parameters": {
+								"audio-file": {
+									"path": "High_security_door_open"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 722218674062072
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 143438338902631,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 404696407806584,
+							"parameters": {
+								"layout": "currentLayout"
+							}
+						}
+					],
+					"sid": 223261235942711
+				}
+			]
+		}
+	],
 	"sid": 690942595549654
 }

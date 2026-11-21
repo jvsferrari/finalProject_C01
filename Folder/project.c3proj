@@ -182,7 +182,12 @@
 			"err2",
 			"Sprite",
 			"serverRack",
-			"key"
+			"key",
+			"err",
+			"wiperWave",
+			"procText",
+			"statusText",
+			"goldpixelarttrophy8bitretrotrophyiconwinnerstrophyawardpixelartstylepng"
 		],
 		"subfolders": []
 	},
@@ -735,5 +740,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": null
+	"firstLayout": "start"
 }

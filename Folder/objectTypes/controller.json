@@ -39,6 +39,41 @@
 			"desc": "",
 			"show": true,
 			"sid": 768165908646575
+		},
+		{
+			"name": "gpuHeat",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 656918104465688
+		},
+		{
+			"name": "minersKilled",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 853113278906380
+		},
+		{
+			"name": "totalGPU",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 277468195442212
+		},
+		{
+			"name": "minerCount",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 315395857145863
+		},
+		{
+			"name": "minerShare",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 488218773712969
 		}
 	],
 	"behaviorTypes": [],

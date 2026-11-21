@@ -1,0 +1,25 @@
+{
+	"name": "statusText",
+	"plugin-id": "Text",
+	"sid": 672756741108132,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "row",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 535748693506758
+		},
+		{
+			"name": "isMiner",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 762995669861772
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

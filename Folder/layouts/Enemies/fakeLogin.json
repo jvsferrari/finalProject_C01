@@ -283,18 +283,20 @@
 					"uid": 41,
 					"sid": 613657924641871,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"row": 0
+					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1560.286950893732,
-						"y": 148.08158643310216,
+						"x": 1210,
+						"y": 50,
 						"width": 64.38634924106691,
 						"height": 65.01157246115037,
-						"originX": 5.915384615384616,
-						"originY": 1.976923076923077,
+						"originX": 0.49230769230769234,
+						"originY": 0.49230769230769234,
 						"color": [
 							1,
 							1,
@@ -474,7 +476,12 @@
 						"errors": 0,
 						"URLcount": 0,
 						"index": 0,
-						"corrects": 0
+						"corrects": 0,
+						"gpuHeat": 20,
+						"minersKilled": 0,
+						"totalGPU": 0,
+						"minerCount": 0,
+						"minerShare": 0
 					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
@@ -598,18 +605,20 @@
 					"uid": 53,
 					"sid": 425932238392876,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"row": 0
+					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1208,
-						"y": 539,
+						"x": 750,
+						"y": 415,
 						"width": 84.5,
 						"height": 84.5,
-						"originX": 5.915384615384616,
-						"originY": 1.976923076923077,
+						"originX": 0.49230769230769234,
+						"originY": 0.49230769230769234,
 						"color": [
 							1,
 							1,
@@ -666,18 +675,20 @@
 					"uid": 54,
 					"sid": 472439813352674,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"row": 0
+					},
 					"behaviors": {},
 					"materialSurfaceType": "smooth",
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1429,
-						"y": 242,
+						"x": 971,
+						"y": 117,
 						"width": 84.5,
 						"height": 84.5,
-						"originX": 5.915384615384616,
-						"originY": 1.976923076923077,
+						"originX": 0.49230769230769234,
+						"originY": 0.49230769230769234,
 						"color": [
 							1,
 							1,

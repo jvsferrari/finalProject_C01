@@ -9,7 +9,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 685020455152062
+			"sid": 831645591703618
 		},
 		{
 			"eventType": "variable",
@@ -19,7 +19,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 633093487753895
+			"sid": 993947631209845
 		},
 		{
 			"eventType": "variable",
@@ -29,7 +29,27 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 568939475201394
+			"sid": 626240384112389
+		},
+		{
+			"eventType": "variable",
+			"name": "hpBarMaxWidth",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 888630007325821
+		},
+		{
+			"eventType": "variable",
+			"name": "invulnerable",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 719640426132094
 		},
 		{
 			"eventType": "block",
@@ -37,37 +57,141 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 307622747107654
+					"sid": 305614185849109
 				}
 			],
 			"actions": [
 				{
 					"id": "scroll-to-position",
 					"objectClass": "System",
-					"sid": 684549607608039,
+					"sid": 392582063902973,
 					"parameters": {
 						"x": "750",
 						"y": "500"
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 143539085663579,
+					"parameters": {
+						"variable": "invulnerable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 814443891209198,
+					"parameters": {
+						"variable": "currentLayout",
+						"value": "LayoutName"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 201608893991432,
+					"parameters": {
+						"variable": "HP",
+						"value": "100"
+					}
+				},
+				{
 					"id": "set-width",
 					"objectClass": "hpBar",
-					"sid": 715479522694552,
+					"sid": 626138866134947,
 					"parameters": {
-						"width": "hpBar.Width*(HP/100)"
+						"width": "max(0, 600*(HP/100))"
 					}
 				}
 			],
-			"sid": 807484311410295,
+			"sid": 850839516883998,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 312855867367381,
+							"parameters": {
+								"variable": "currentMusic",
+								"comparison": 1,
+								"value": "\"Alternative_theme_prison\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 541675555504018,
+							"parameters": {
+								"tag": "currentMusic"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 855594084085079,
+							"parameters": {
+								"variable": "currentMusic",
+								"value": "\"Alternative_theme_prison\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 721011890728853,
+							"parameters": {
+								"audio-file": {
+									"path": "Alternative_theme_prison"
+								},
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "currentMusic"
+							}
+						}
+					],
+					"sid": 166386387513234,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 307264395992557,
+									"parameters": {
+										"variable": "musicOn"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-muted",
+									"objectClass": "Audio",
+									"sid": 915418071764992,
+									"parameters": {
+										"tag": "currentMusic",
+										"state": "muted"
+									}
+								}
+							],
+							"sid": 738132866097528
+						}
+					]
+				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 382684249252031,
+							"sid": 465307324417233,
 							"parameters": {
 								"variable": "enemyDefeated"
 							}
@@ -75,7 +199,7 @@
 						{
 							"id": "pick-by-unique-id",
 							"objectClass": "enemies",
-							"sid": 943171190673913,
+							"sid": 590469551974859,
 							"parameters": {
 								"unique-id": "currentEnemy"
 							}
@@ -85,10 +209,19 @@
 						{
 							"id": "destroy",
 							"objectClass": "enemies",
-							"sid": 308815463086999
+							"sid": 749681790121426
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 694243714781568,
+							"parameters": {
+								"variable": "enemyDefeated",
+								"value": "false"
+							}
 						}
 					],
-					"sid": 406668928772028
+					"sid": 580180133748523
 				},
 				{
 					"eventType": "block",
@@ -96,7 +229,7 @@
 						{
 							"id": "pick-all",
 							"objectClass": "System",
-							"sid": 728846089407426,
+							"sid": 730421976868169,
 							"parameters": {
 								"object": "enemies"
 							}
@@ -106,14 +239,14 @@
 						{
 							"id": "set-max-speed",
 							"objectClass": "enemies",
-							"sid": 623420715513853,
+							"sid": 204345169877153,
 							"behaviorType": "Pathfinding",
 							"parameters": {
 								"speed": "50"
 							}
 						}
 					],
-					"sid": 526279471689340
+					"sid": 344905402719498
 				}
 			]
 		},
@@ -123,7 +256,7 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 235281066792266,
+					"sid": 179164462902720,
 					"parameters": {
 						"interval-seconds": "0.2"
 					}
@@ -133,15 +266,15 @@
 				{
 					"id": "find-path",
 					"objectClass": "enemies",
-					"sid": 757534431352508,
+					"sid": 311558044767315,
 					"behaviorType": "Pathfinding",
 					"parameters": {
-						"x": "750",
-						"y": "500"
+						"x": "iconSprites.X",
+						"y": "iconSprites.Y"
 					}
 				}
 			],
-			"sid": 291319034415838
+			"sid": 832831225175713
 		},
 		{
 			"eventType": "block",
@@ -149,7 +282,7 @@
 				{
 					"id": "on-path-found",
 					"objectClass": "enemies",
-					"sid": 619223270150082,
+					"sid": 324742923455974,
 					"behaviorType": "Pathfinding"
 				}
 			],
@@ -157,11 +290,11 @@
 				{
 					"id": "move-along-path",
 					"objectClass": "enemies",
-					"sid": 854657869253837,
+					"sid": 548082212928247,
 					"behaviorType": "Pathfinding"
 				}
 			],
-			"sid": 764444536105319
+			"sid": 458175142996523
 		},
 		{
 			"eventType": "block",
@@ -169,17 +302,35 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "enemies",
-					"sid": 144534118957814,
+					"sid": 835759424481086,
 					"parameters": {
 						"object": "iconSprites"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 501324759556837,
+					"parameters": {
+						"variable": "invulnerable"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 713919155890755,
+					"parameters": {
+						"variable": "invulnerable",
+						"value": "true"
+					}
+				},
+				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 573158994634183,
+					"sid": 587481025168456,
 					"parameters": {
 						"variable": "HP",
 						"value": "35"
@@ -188,13 +339,70 @@
 				{
 					"id": "set-width",
 					"objectClass": "hpBar",
-					"sid": 602576492325569,
+					"sid": 277010756797164,
 					"parameters": {
-						"width": "hpBar.Width*(HP/100)"
+						"width": "max(0, 600*(HP/100))"
 					}
 				}
 			],
-			"sid": 250370156959112
+			"sid": 474272528828171,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 474916871288243,
+							"parameters": {
+								"variable": "soundsOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 816073713499260,
+							"parameters": {
+								"audio-file": {
+									"path": "Trap_electric_shock"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 117265951605164
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 748655335575319,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 575651377382770,
+							"parameters": {
+								"variable": "invulnerable",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 335203955600572
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -202,7 +410,7 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 273749319136721,
+					"sid": 661237290626713,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
@@ -214,69 +422,70 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 528486062812114,
+					"sid": 399864611969804,
 					"parameters": {
 						"variable": "currentEnemy",
 						"value": "enemies.UID"
 					}
+				}
+			],
+			"sid": 761415868650958,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 435895834015130,
+							"parameters": {
+								"variable": "soundsOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 401499196488787,
+							"parameters": {
+								"audio-file": {
+									"path": "Prison_buzzer"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 466720126554728
 				},
 				{
-					"id": "go-to-layout-by-name",
-					"objectClass": "System",
-					"sid": 298012534312177,
-					"parameters": {
-						"layout": "enemies.layoutName"
-					}
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 369058632542445,
+							"parameters": {
+								"seconds": "0.15",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 182583012010937,
+							"parameters": {
+								"layout": "enemies.layoutName"
+							}
+						}
+					],
+					"sid": 797735383561420
 				}
-			],
-			"sid": 880309292541985
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 843650732508175
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 116326471603752,
-					"parameters": {
-						"variable": "currentLayout",
-						"value": "LayoutName"
-					}
-				}
-			],
-			"sid": 240919852661727
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 553306819993298,
-					"parameters": {
-						"interval-seconds": "1.0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "log",
-					"objectClass": "Browser",
-					"sid": 252985133990833,
-					"parameters": {
-						"type": "log",
-						"message": "currentLayout"
-					}
-				}
-			],
-			"sid": 570649968453996
+			]
 		},
 		{
 			"eventType": "block",
@@ -284,34 +493,252 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 756142724274171,
+					"sid": 713414424051999,
 					"parameters": {
 						"variable": "HP",
 						"comparison": 3,
 						"value": "0"
 					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 111880042404221
 				}
 			],
 			"actions": [
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 271036749306128,
+					"sid": 896356383596001,
+					"parameters": {
+						"variable": "HP",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 120129230326665,
 					"parameters": {
 						"variable": "currentLayout",
 						"value": "\"newGame\""
 					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 487235715792120,
-					"parameters": {
-						"layout": "newGame"
-					}
 				}
 			],
-			"sid": 709413939072668
+			"sid": 584218778127581,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 755666018475732,
+							"parameters": {
+								"variable": "soundsOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 202403138614806,
+							"parameters": {
+								"audio-file": {
+									"path": "Alarm_loopable"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 785778387385267
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 400934216487330,
+							"parameters": {
+								"layout": "newGame"
+							}
+						}
+					],
+					"sid": 786362779660808
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 625217889258406,
+					"parameters": {
+						"first-value": "enemies.Count",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 460233191992135
+				}
+			],
+			"actions": [],
+			"sid": 268893586190211,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 981955818482743,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"downloads\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 887085119437569,
+							"parameters": {
+								"variable": "downloadsDone",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 438506296837978
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 293210666059619,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"documents\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 295782824023927,
+							"parameters": {
+								"variable": "documentsDone",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 911802744360528
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 306154755876798,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"codes\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 303465965806795,
+							"parameters": {
+								"variable": "codesDone",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 139856426749767
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 321543149920825,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"spreadsheets\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 825306662456808,
+							"parameters": {
+								"variable": "spreadsheetsDone",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 905082132253808
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 535906283992262,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 619813815356241,
+							"parameters": {
+								"variable": "currentLayout",
+								"value": "\"newGame\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 216554435736380,
+							"parameters": {
+								"layout": "newGame"
+							}
+						}
+					],
+					"sid": 802768436918815
+				}
+			]
 		}
 	],
 	"sid": 694664222126839

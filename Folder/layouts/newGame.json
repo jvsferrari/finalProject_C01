@@ -478,7 +478,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"currentPosition": 0,
-						"trojan": false
+						"trojan": false,
+						"inside": false
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -489,7 +490,7 @@
 								"rotate-speed": 0,
 								"set-angle": true,
 								"stop-on-solids": false,
-								"enabled": true
+								"enabled": false
 							}
 						},
 						"DragDrop": {
@@ -506,7 +507,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 532,
+						"x": 543,
 						"y": 190,
 						"width": 128,
 						"height": 128,
@@ -536,7 +537,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"currentPosition": 0,
-						"trojan": false
+						"trojan": false,
+						"inside": false
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -553,7 +555,7 @@
 						"DragDrop": {
 							"properties": {
 								"axes": "both",
-								"enabled": true
+								"enabled": false
 							}
 						},
 						"Flash": {
@@ -594,7 +596,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"currentPosition": 0,
-						"trojan": false
+						"trojan": false,
+						"inside": false
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -611,7 +614,7 @@
 						"DragDrop": {
 							"properties": {
 								"axes": "both",
-								"enabled": true
+								"enabled": false
 							}
 						},
 						"Flash": {
@@ -652,7 +655,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"currentPosition": 0,
-						"trojan": false
+						"trojan": false,
+						"inside": false
 					},
 					"behaviors": {
 						"MoveTo": {
@@ -669,7 +673,7 @@
 						"DragDrop": {
 							"properties": {
 								"axes": "both",
-								"enabled": true
+								"enabled": false
 							}
 						},
 						"Flash": {
@@ -728,21 +732,124 @@
 			"global": false
 		},
 		{
-			"name": "clock",
+			"name": "victory",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "clock",
+					"type": "instructionsPopUp",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"tile-width": 64,
+						"tile-height": 64,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 4,
+					"sid": 147643448884553,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 20,
+							"height": 11,
+							"max-width": 20,
+							"max-height": 11,
+							"data": "45x79,13,5x54,28,43,3x79,14,5x6,29,44,3x79,14,5x6,29,44,3x79,14,5x6,29,44,3x79,14,5x6,29,44,3x79,14,5x6,29,44,3x79,14,5x6,29,44,3x79,14,5x6,29,44,3x79,14,5x6,29,44,3x79,14,5x6,29,44,3x79,14,5x6,29,44,3x79,15,5x53,30,45,46x79"
+						},
+						"tile-width": 64,
+						"tile-height": 64,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 720,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0
+					}
+				},
+				{
+					"type": "instructions",
+					"properties": {
+						"text": "Parabéns!\nVocê concluiu todas as fases!",
+						"enable-bbcode": true,
+						"font": "Jersey25-Regular",
+						"size": 60,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.7254901960784313,
+							0.596078431372549,
+							0.9254901960784314,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 189,
+					"sid": 155244987865833,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 304,
+						"y": 16,
+						"width": 666,
+						"height": 396,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "goldpixelarttrophy8bitretrotrophyiconwinnerstrophyawardpixelartstylepng",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 13,
-					"sid": 868166642219865,
+					"uid": 190,
+					"sid": 828610010228601,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
@@ -750,127 +857,27 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1152,
-						"y": 624,
-						"width": 256,
-						"height": 276,
+						"x": 641,
+						"y": 411,
+						"width": 138,
+						"height": 118,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
-							0.8
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "clockHours",
-					"properties": {
-						"text": "9",
-						"enable-bbcode": true,
-						"font": "Jersey25-Regular",
-						"size": 72,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.20392156862745098,
-							0.7372549019607844,
-							0.30980392156862746,
 							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 23,
-					"sid": 533814660356724,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1109,
-						"y": 616,
-						"width": 96,
-						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0.8
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "clockMinutes",
-					"properties": {
-						"text": "00",
-						"enable-bbcode": true,
-						"font": "Jersey25-Regular",
-						"size": 72,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.20392156862745098,
-							0.7372549019607844,
-							0.30980392156862746,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 24,
-					"sid": 179485608512542,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"materialSurfaceType": "smooth",
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1199,
-						"y": 616,
-						"width": 96,
-						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0.8
 						],
 						"z": 0,
 						"angle": 0
 					}
 				}
 			],
-			"sid": 103054395797678,
+			"sid": 401199115468806,
 			"effectTypes": [],
 			"isInitiallyVisible": false,
-			"isInitiallyInteractive": false,
+			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
 			"color": [
 				1,
@@ -879,12 +886,12 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				0,
+				0,
+				0,
 				1
 			],
-			"isTransparent": true,
+			"isTransparent": false,
 			"sampling": "auto",
 			"parallaxX": 1,
 			"parallaxY": 1,
@@ -895,7 +902,7 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
-			"global": true
+			"global": false
 		}
 	],
 	"sid": 725223056459715,

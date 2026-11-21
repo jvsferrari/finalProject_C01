@@ -4,7 +4,15 @@
 	"sid": 336120252901285,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "row",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 441398717799578
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -14,8 +22,8 @@
 					{
 						"width": 130,
 						"height": 130,
-						"originX": 5.915384615384616,
-						"originY": 1.976923076923077,
+						"originX": 0.49230769230769234,
+						"originY": 0.49230769230769234,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,

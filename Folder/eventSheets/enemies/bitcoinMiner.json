@@ -1,5 +1,1018 @@
 {
 	"name": "bitcoinMiner",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 291246390279642
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 507424204241116,
+					"parameters": {
+						"tag": "currentMusic"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 406786626380506,
+					"parameters": {
+						"variable": "currentMusic",
+						"value": "\"Battle_theme_prison\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 465931677084512,
+					"parameters": {
+						"audio-file": {
+							"path": "Battle_theme_prison"
+						},
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "currentMusic"
+					}
+				}
+			],
+			"sid": 120321816741561,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 301777397921228,
+							"parameters": {
+								"variable": "musicOn"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 844575327638883,
+							"parameters": {
+								"tag": "currentMusic",
+								"state": "muted"
+							}
+						}
+					],
+					"sid": 817391233275967
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 691334622613773,
+							"parameters": {
+								"object": "procText"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "procText",
+							"sid": 955272550550445,
+							"parameters": {
+								"instance-variable": "isMiner",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "procText",
+							"sid": 292167052164857,
+							"parameters": {
+								"instance-variable": "procName",
+								"value": "choose(\"explorer.exe\", \"system.exe\", \"audio_drv.exe\", \"winlogon.exe\", \"svchost.exe\")"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "procText",
+							"sid": 656070443889010,
+							"parameters": {
+								"instance-variable": "gpu",
+								"value": "floor(random(1, 4))"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "procText",
+							"sid": 474956015810001,
+							"parameters": {
+								"text": "left(procText.procName & \"               \", 15) & procText.gpu & \"%\""
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "procText",
+							"sid": 559565221280655,
+							"parameters": {
+								"color": "HexColor(\"#ffffff\")"
+							}
+						}
+					],
+					"sid": 888439948064856
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 257921020199640,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "closeTab"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "closeTab",
+					"sid": 318807680491208,
+					"parameters": {
+						"instance-variable": "row",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 830924738821680,
+					"parameters": {
+						"layer": "\"instructions\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 673161301143503,
+					"parameters": {
+						"layer": "\"instructions\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 625124502489312
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 309373217644687,
+					"parameters": {
+						"layer": "\"instructions\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 990132099251032,
+					"parameters": {
+						"interval-seconds": "1.2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "procText",
+					"sid": 720676293080698,
+					"parameters": {
+						"instance-variable": "isMiner"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "pick-random-instance",
+					"objectClass": "System",
+					"sid": 615478798630777,
+					"parameters": {
+						"object": "procText"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "procText",
+					"sid": 419353103397332,
+					"parameters": {
+						"instance-variable": "isMiner",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "procText",
+					"sid": 137702492127956,
+					"parameters": {
+						"instance-variable": "procName",
+						"value": "choose(\"btc_miner.exe\", \"gpu_boost.exe\", \"svch0st.exe\", \"xmr_rig.exe\", \"hash_pool.exe\")"
+					}
+				}
+			],
+			"sid": 961386501213915
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 945193846884334,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "closeTab"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 670077179185706,
+					"parameters": {
+						"layer": "\"instructions\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "controller",
+					"sid": 264932355930461,
+					"parameters": {
+						"instance-variable": "minersKilled",
+						"comparison": 2,
+						"value": "10"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "controller",
+					"sid": 484451896250341,
+					"parameters": {
+						"instance-variable": "errors",
+						"comparison": 2,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "controller",
+					"sid": 853396957021244,
+					"parameters": {
+						"instance-variable": "gpuHeat",
+						"comparison": 2,
+						"value": "100"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "closeTab",
+					"sid": 585306722649322,
+					"parameters": {
+						"instance-variable": "row",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "procText",
+					"sid": 742141940997880,
+					"parameters": {
+						"instance-variable": "row",
+						"comparison": 0,
+						"value": "closeTab.row"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 464108178608336,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "procText",
+							"sid": 771322953185605,
+							"parameters": {
+								"instance-variable": "isMiner"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "procText",
+							"sid": 726872182541610,
+							"parameters": {
+								"instance-variable": "isMiner",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "procText",
+							"sid": 588450263701378,
+							"parameters": {
+								"instance-variable": "procName",
+								"value": "choose(\"explorer.exe\", \"system.exe\", \"audio_drv.exe\", \"winlogon.exe\", \"svchost.exe\")"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "procText",
+							"sid": 259917944992944,
+							"parameters": {
+								"instance-variable": "gpu",
+								"value": "floor(random(1, 4))"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "procText",
+							"sid": 341590942476142,
+							"parameters": {
+								"text": "left(procText.procName & \"               \", 15) & procText.gpu & \"%\""
+							}
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "controller",
+							"sid": 888225199996017,
+							"parameters": {
+								"instance-variable": "minersKilled",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "controller",
+							"sid": 682781288323661,
+							"parameters": {
+								"instance-variable": "gpuHeat",
+								"value": "max(0, controller.gpuHeat - 8)"
+							}
+						}
+					],
+					"sid": 688194614411755,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 627002514447536,
+									"parameters": {
+										"variable": "soundsOn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 987697581764847,
+									"parameters": {
+										"audio-file": {
+											"path": "Laser"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 146332186264729
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "controller",
+									"sid": 592481400300049,
+									"parameters": {
+										"instance-variable": "minersKilled",
+										"comparison": 5,
+										"value": "10"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 692436689144842
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 282657801565522,
+									"parameters": {
+										"variable": "enemyDefeated",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 907010873296757,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 531105321288140,
+											"parameters": {
+												"variable": "soundsOn"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 444532796100402,
+											"parameters": {
+												"audio-file": {
+													"path": "High_security_door_open"
+												},
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 602618172167648
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 557735093367695,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "go-to-layout-by-name",
+											"objectClass": "System",
+											"sid": 382520953867638,
+											"parameters": {
+												"layout": "currentLayout"
+											}
+										}
+									],
+									"sid": 741647424771080
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 950432136302305
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "controller",
+							"sid": 959037760880287,
+							"parameters": {
+								"instance-variable": "errors",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 716343212486400,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 343184423822941,
+									"parameters": {
+										"variable": "soundsOn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 715497082422690,
+									"parameters": {
+										"audio-file": {
+											"path": "Glitch"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 613241381922151
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "err",
+									"sid": 386812169626922,
+									"parameters": {
+										"instance-variable": "number",
+										"comparison": 0,
+										"value": "controller.errors"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "err",
+									"sid": 963543587335198,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 227086848671507
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "controller",
+									"sid": 473424602754735,
+									"parameters": {
+										"instance-variable": "errors",
+										"comparison": 5,
+										"value": "3"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 154941269787144
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 224392015774531,
+									"parameters": {
+										"variable": "HP",
+										"value": "35"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 522131144079783,
+									"parameters": {
+										"variable": "enemyDefeated",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 463108653267991,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 917236899413600,
+											"parameters": {
+												"variable": "soundsOn"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 970998574298741,
+											"parameters": {
+												"audio-file": {
+													"path": "Punch_with_electricity"
+												},
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 623977152780563
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 380705636336600,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "go-to-layout-by-name",
+											"objectClass": "System",
+											"sid": 783337927722634,
+											"parameters": {
+												"layout": "currentLayout"
+											}
+										}
+									],
+									"sid": 877205410206107
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 117444723762580,
+					"parameters": {
+						"layer": "\"instructions\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "controller",
+					"sid": 365686582281313,
+					"parameters": {
+						"instance-variable": "minersKilled",
+						"comparison": 2,
+						"value": "10"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "controller",
+					"sid": 144191903421155,
+					"parameters": {
+						"instance-variable": "errors",
+						"comparison": 2,
+						"value": "3"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 878219291362439,
+					"parameters": {
+						"interval-seconds": "0.2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "controller",
+					"sid": 157522309008143,
+					"parameters": {
+						"instance-variable": "totalGPU",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "controller",
+					"sid": 802697228145047,
+					"parameters": {
+						"instance-variable": "minerCount",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 669421398433341,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 538257796225516,
+							"parameters": {
+								"object": "procText"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "procText",
+							"sid": 443637245558785,
+							"parameters": {
+								"instance-variable": "isMiner"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "controller",
+							"sid": 482832315595566,
+							"parameters": {
+								"instance-variable": "totalGPU",
+								"value": "procText.gpu"
+							}
+						}
+					],
+					"sid": 449013804380324
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 436752514179815,
+							"parameters": {
+								"object": "procText"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "procText",
+							"sid": 326782913215662,
+							"parameters": {
+								"instance-variable": "isMiner"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "controller",
+							"sid": 568037524940085,
+							"parameters": {
+								"instance-variable": "minerCount",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 448832446855967
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 901175826441789,
+							"parameters": {
+								"instance-variable": "minerCount",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "controller",
+							"sid": 982280584258941,
+							"parameters": {
+								"instance-variable": "minerShare",
+								"value": "floor(min(100 - controller.totalGPU, 72 + controller.minerCount * 13) / controller.minerCount)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "controller",
+							"sid": 118289292506139,
+							"parameters": {
+								"instance-variable": "gpuHeat",
+								"value": "min(100, controller.gpuHeat + controller.minerCount * 1.4)"
+							}
+						}
+					],
+					"sid": 504249299861370,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 382695200383830,
+									"parameters": {
+										"object": "procText"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "procText",
+									"sid": 583551198271976,
+									"parameters": {
+										"instance-variable": "isMiner"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "procText",
+									"sid": 540777383236975,
+									"parameters": {
+										"instance-variable": "gpu",
+										"value": "controller.minerShare"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "procText",
+									"sid": 996238995788792,
+									"parameters": {
+										"text": "left(procText.procName & \"               \", 15) & procText.gpu & \"%\""
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "controller",
+									"sid": 186461136595818,
+									"parameters": {
+										"instance-variable": "totalGPU",
+										"value": "controller.minerShare"
+									}
+								}
+							],
+							"sid": 191062934693990
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "statusText",
+							"sid": 877655018519727,
+							"parameters": {
+								"text": "\"USO GPU: \" & min(100, controller.totalGPU) & \"%  |  SOBRECARGA: \" & floor(controller.gpuHeat) & \"%  |  BLOQUEADOS: \" & controller.minersKilled & \"/10\""
+							}
+						}
+					],
+					"sid": 688814820409771
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "controller",
+							"sid": 895704356826093,
+							"parameters": {
+								"instance-variable": "gpuHeat",
+								"comparison": 5,
+								"value": "100"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 177434838705473
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 783499355412178,
+							"parameters": {
+								"variable": "HP",
+								"value": "35"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 546512902290964,
+							"parameters": {
+								"variable": "enemyDefeated",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 869837165665865,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 193519210492239,
+									"parameters": {
+										"variable": "soundsOn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 219902477997015,
+									"parameters": {
+										"audio-file": {
+											"path": "Punch_with_electricity"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 520517929207706
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 971401205732614,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 936558578891972,
+									"parameters": {
+										"layout": "currentLayout"
+									}
+								}
+							],
+							"sid": 391034028279213
+						}
+					]
+				}
+			]
+		}
+	],
 	"sid": 346692108074167
 }
